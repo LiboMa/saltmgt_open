@@ -1,0 +1,76 @@
+{% extends "admin/bs.html" %}
+
+{% block sidebar %}
+<div class="list-group" id="list-tab" role="tablist">
+		{% if projects %}
+				{% for p in projects %}
+        <a class="list-group-item list-group-item-action" href="/autocd/project/{{p.pk}}/" role="tab">{{ p.project_name }}</a>
+				{% endfor %}
+		{% else %}
+				<p>no projects.</p>
+		{% endif %}
+<div class="list-group" id="list-tab" role="tablist">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Project Deploy Environments</h1>
+  <a class="btn btn-primary" href="/admin/autocd/deploy_env/add/">New Env</a>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>env</th>
+        <th>project_name</th>
+        <th>current_version</th>
+        <!--<th>last_update</th> -->
+      </tr>
+    </thead>
+    <tbody>
+		{% if deploy_env_list %}
+				{% for deploy_env in deploy_env_list %}
+      <tr>
+						<td><a href="./deploy/{{ deploy_env.id }}/">{{ deploy_env.env }}</a></td>
+						<td>{{ deploy_env.project_name }}</td>
+						<td>{{ deploy_env.current_version }}</td>
+            <!--<td>{{ deploy_env.update_on }}</td> -->
+      </tr>
+				{% endfor %}
+		{% else %}
+				<p>no projects.</p>
+		{% endif %}
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <h2>Tasks list</h2>
+  <p></p>            
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>project_name</th>
+        <th>implementing_version</th>
+        <th>update_on</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% if tasks %}
+        {% for task in tasks %}
+        <tr>
+              <td>{{ task.id }}</a></td>
+              <td>{{ task.env.project_name }}</td>
+              <td>{{ task.deploy_url }}</td>
+              <td>{{ task.date }}</td>
+              <td><a class="btn" href="/autocd/result/{{ task.id }}">{{ task.status }}</td>
+        </tr>
+        {% endfor %}
+    {% else %}
+        <p>No Tasks so far.</p>
+    {% endif %}
+    </tbody>
+  </table>                                                                                                                              
+</div>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+TEST command:
+
+from autocd.models import *
+qt=tasks.objects.select_related().get(pk=34)
+yaml.load(qt.env.pillar)
+
+salt -t1 -N test_group state.apply fso_test_cons_be_linux pillar="{'FSOnlineURLAuthority': 'fsonline-api-con.fs86.vwf.vwfs-ad:8081', 'API_DCPApplicantURL': 'http://10.42.84.212:8085/DataApi/ApplicantApi.ashx', 'API_SmsService': 'http://fscnbesa2007/smsservice/SmsService', 'ImagesRewrite': 'http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}', 'API_LogPath': 'D:\\logs\\', 'API_DCPLeadURL': 'http://10.42.84.212:8085/DataApi/LeadApi.ashx', 'API_SMSWinService': 'http://fscnbesa2007/smsservice/SMSWinService', 'SwaggerRootUrl': 'https://114.247.183.89', 'AdminProxy_ProxyURL': 'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy', 'AdminProxy_LogPath': 'D:\\logs\\', 'API_ConnectionString': 'data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework', 'ClientProxy_ProxyURL': 'cons.vwfs-online.com/proxy', 'ClientProxy_LogPath': 'C:\\logs\\', 'API_DgiService': 'http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService', 'API_SMSWinService_servicePrincipalName': 'host/FSCNBEY12102.fs86.vwf.vwfs-ad', 'API_TestVerificationCode': 99999, 'API_ImagesRoot': 'D:\\wwwRoot\\images'}"
+

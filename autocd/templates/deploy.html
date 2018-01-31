@@ -1,0 +1,61 @@
+{% extends "admin/bs.html" %}
+
+{% block content %}
+<div class="container">
+  <h1> {{ tasks.env }}</h1>
+  <p>deploy code by clicking deploy</p>            
+
+
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>env</th>
+        <th>project_name</th>
+        <th>current_version</th>
+        <th>status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+						<td><{{ tasks.env }}/td>
+						<td>{{ tasks.project_name }}</td>
+						<td>{{ tasks.current_version }}</td>
+						<td>{{ tasks.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+{% if error_msg %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<div class="container">
+
+    <form action="new/" method="post"> 
+  <div class="form-row">
+      {% csrf_token %}
+    <div class="form-group col-md-12">
+      <label for="deploy_url">Deploy URL</label>
+      <input class="form-control" name='deploy_url' id="deploy_url" type="text" rows="3" required></input>
+    </div>
+  </div>
+   <button type="submit" class="btn btn-primary">Deploy</button>
+
+    <div class="form-group">
+      <input class="form-control" name='deploy_env_id' id="env_id" type="hidden" value="{{tasks.id}}" />
+    </div>
+    <div class="form-group col">
+      <label for="pillar">pillar</label>
+      <textarea class="form-control" name='pillar' id="pillar" rows="10" readonly>{{ tasks.pillar }}</textarea>
+      <button type="button" class="btn btn-light" href="#">check</button>
+    </div>
+    <div class="form-group col">
+      <label for="state">State file</label>
+      <textarea class="form-control" name='state' id="state" rows="10" readonly >{{tasks.state}}</textarea>
+    </div>
+
+</form>
+</div>
+
+
+{% endblock %}

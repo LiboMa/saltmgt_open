@@ -1,0 +1,159 @@
+{% extends "admin/bs.html" %}
+{% block sidebar %}
+
+<div class="list-group" id="list-tab" role="tablist">
+    {% if projects %}
+        {% for p in projects %}
+          <a class="list-group-item list-group-item-action" href="/autocd/project/{{p.pk}}/" role="tab">{{p.project_name}}</a>
+        {% endfor %}
+    {% else %}
+        <p>no projects.</p>
+    {% endif %}                                                                                                                         
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Project Deploy Environments</h1>
+    <a class="btn btn-primary" href="./mgdeployenv/add/">New Env</a>
+    <!-- <a class="btn btn-primary" href="/admin/autocd/mgdeployenv/add/">New Env</a> -->
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>env</th>
+        <th>project_name</th>
+        <th>current_version</th>
+        <th>last_update</th>
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+		{% if deploy_env_list %}
+				{% for deploy_env in deploy_env_list %}
+      <tr>
+        <!--<td><a href="/autocd/mgdeployenv/{{deploy_env.id}}/change/" target="_blank">{{ deploy_env.deploy_env }}</a></td>-->
+        <td><a href="/autocd/mgdeployenv/{{deploy_env.id}}/change/">{{ deploy_env.deploy_env }}</a></td>
+						<td>{{ deploy_env.project_name }}</td>
+						<td>{{ deploy_env.current_version }}</td>
+						<td>{{ deploy_env.update_on }}</td>
+                        <td><a class="btn btn-success"  href="/autocd/deploy/{{ deploy_env.id }}/">deploy</a>
+                          <a class="btn btn-danger"  href="#" onclick="delete_env({{deploy_env.id}}, {{deploy_env.project_name_id}})">delete </a>
+                        </td>
+      </tr>
+				{% endfor %}
+		{% else %}
+				<p>no related tasks.</p>
+		{% endif %}
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <h2>Tasks list</h2>
+  <p></p>            
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>project_name</th>
+        <th>implementing_version</th>
+        <th>update_on</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+		{% if tasks %}
+				{% for task in tasks %}
+                <tr>
+              <td>{{ task.id }}</a></td>
+              <td>{{ task.env.project_name }}</td>
+              <td>{{ task.deploy_url }}</td>
+              <td>{{ task.date }}</td>
+                    {% if task.status == 'done'%}
+                    <td><a class="badge badge-success" href="/autocd/result/{{ task.id }}">{{ task.status }}</td>
+                    {%elif task.status == 'failed' %}
+                    <td><a class="badge badge-danger" href="/autocd/result/{{ task.id }}">{{ task.status }}</td>
+                    {% else %}
+                    <td><a class="badge badge-info" href="/autocd/result/{{ task.id }}">{{ task.status }}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+		{% else %}
+				<p>No Tasks so far.</p>
+		{% endif %}
+    </tbody>
+  </table>
+</div>
+
+
+     <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Result of #{{ task.id }}</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+            {{ task.result }}
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+    <!-- modal -->
+    <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">delete entry</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       Do you want to delete this env?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+          <!--<a type="button" id="confirmed" class="btn btn-danger"  href="./mgdeployenv/{{ deploy_env.id }}/delete/">Yes, confirm</a> -->
+          <button type="button" id="confirmed" class="btn btn-danger">Yes, confirm</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- javascript here -->
+<!--<script src='/static/js/confirm.js'></script> -->
+<script>
+
+    function delete_env(dev_id, project_id){
+    
+        var url="./mgdeployenv/"+dev_id+"/delete/";
+        var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+    
+        $("#delModal").modal('show');
+        $("#confirmed").on('click',function(){
+        
+                $.post(url,{'project_id':project_id,'md_deploy_env_id':dev_id, 'csrfmiddlewaretoken': '{{ csrf_token }}'})
+               .done(function(){
+                           window.location.reload();
+                           });
+        });
+    }
+</script>
+
+
+{% endblock %}

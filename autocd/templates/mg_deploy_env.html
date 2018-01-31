@@ -1,0 +1,82 @@
+{% extends "admin/bs.html" %}
+
+{% block content %}
+
+<div class="">
+  <h3> {{app_title}} Deploy Environments for minion groups</h3>
+  <hr />
+
+<form action="." method="post">
+    {% csrf_token %}
+  <div class="form-group">
+    
+    <label for="Project-name">Project </label>
+      <input type="text" class="form-control" name="project_name" id="project_name" value="{{project.project_name}}" readonly>
+  </div>
+  <div class="form-group">
+    <label for="App-Env">Application Environment</label>
+    {% if mg_deploy_env %}
+      <select class="form-control" id="app_env" name="app_env" required>
+                  <option value="" > </option>
+        {% for app_env in app_envs %}
+
+            {% if app_env == mg_deploy_env.env_name %}
+                  <option selected="{{mg_deploy_env.env_name}}">{{app_env.name}}</option>
+            {% else %}
+                  <option>{{app_env.name}}</option>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+      <select class="form-control" id="app_env" name="app_env" required>
+        {% for app_env in app_envs %}
+            <option>{{app_env.name}}</option>
+        {% endfor %}
+    {% endif%}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="minions_groups"> *Deploy env - Minion Groups</label>
+
+      <small id="deploy env Help" class="form-text text-muted">recommended naming example :"{{project.project_name}}_{{app_envs.0.name}}_fe" entry the minion groups which for deploy to</small>
+    {% if mg_deploy_env %}
+    <input type="text" class="form-control" id="mg_deploy_env" name="mg_deploy_env" value="{{mg_deploy_env.deploy_env}}" required>
+    {% else %}
+        <input type="text" class="form-control" id="mg_deploy_env" name="mg_deploy_env" required>
+    {% endif %}
+    {% if error_msg %}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+          <strong>Woops!{{error_msg }}</strong>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="form-group">
+    <label for="pillar">*Pillar definition</label>
+      <small id="pillarHelp" class="form-text text-muted">place pillar variables below</small>
+    {% if mg_deploy_env %}
+    <textarea class="form-control" id="pillar" name='pillar' rows="3" required>{{mg_deploy_env.pillar}}
+    </textarea>
+    {% else %}
+        <textarea class="form-control" id="pillar" name='pillar' rows="3" required></textarea>
+    {% endif %}
+  </div>
+  </div>
+
+  <div class="form-group">
+    <label for="state">*State definition</label>
+      <small id="stateHelp" class="form-text text-muted">place definition of state file below</small>
+    {% if mg_deploy_env %}
+        <textarea class="form-control" id="state" name='state' rows="3" required>{{mg_deploy_env.state}}
+    </textarea>
+    {% else %}
+        <textarea class="form-control" id="state" name='state' rows="3" required></textarea>
+    {% endif %}
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+
+{% endblock %}
