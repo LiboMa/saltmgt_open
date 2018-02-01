@@ -16,5 +16,8 @@ urlpatterns = [
 
     path('tasks/', views.tasks_detail, name='tasks_detail'),
     path('result/<int:task_id>/', views.show_task_result, name='task_result'),
+
+    path('miniongroups/', views.miniongroups_view, name='miniongroups'),
+    path('miniongroups/<int:miniongroup_id>/change/', views.miniongroups_change, name='miniongroups_change'),
 #    path('<int:question_id>/', views.detail, name='detail'),
 ]

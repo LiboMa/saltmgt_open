@@ -1,5 +1,0 @@
-scp /srv/salt/fso/fso_test_all.sls root@beul2017:/srv/salt/fso/
-scp nodegroups.conf root@beul2017:/etc/salt/master.d/
-
-
-

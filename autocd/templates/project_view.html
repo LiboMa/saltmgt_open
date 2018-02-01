@@ -39,7 +39,7 @@
       </tr>
 				{% endfor %}
 		{% else %}
-				<p>no related tasks.</p>
+				<p>no related deploy envs.</p>
 		{% endif %}
     </tbody>
   </table>
@@ -52,20 +52,25 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>project_name</th>
-        <th>implementing_version</th>
-        <th>update_on</th>
-        <th>Status</th>
+         <th>Project</th>
+         <th>Deploy Env</th>
+         <th>Version</th>
+         <th>Operator</th>
+         <th>Date</th>
+          <th>Status</th>
+
       </tr>
     </thead>
     <tbody>
 		{% if tasks %}
 				{% for task in tasks %}
                 <tr>
-              <td>{{ task.id }}</a></td>
-              <td>{{ task.env.project_name }}</td>
-              <td>{{ task.deploy_url }}</td>
-              <td>{{ task.date }}</td>
+										<td>{{ task.id }}</a></td>
+										<td>{{ task.env.project_name }}</td>
+										<td>{{ task.env }}</td>
+										<td>{{ task.deploy_url }}</td>
+										<td>{{ task.owner }}</td>
+										<td>{{ task.date|date:'H:t:s  Y-m-d' }}</td>
                     {% if task.status == 'done'%}
                     <td><a class="badge badge-success" href="/autocd/result/{{ task.id }}">{{ task.status }}</td>
                     {%elif task.status == 'failed' %}

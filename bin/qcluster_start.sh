@@ -55,6 +55,7 @@ stop () {
     then
         gid=$(ps ax -opid,pgid,ppid|grep $pid |grep -v grep|awk -F" " '{print $2}'|head -1)
         pkill -9 -g $gid 
+        kill -9 $(ps aux |grep qcluster|grep -v grep) >/dev/null 2>&1;
         rm $pidfile; 
         return 0;
     else

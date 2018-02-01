@@ -8,15 +8,26 @@
 
 # version=1.0
 # written by dkx4oih(Ma Libo)@ 2018.1.23
+from __future__ import barry_as_FLUFL
+__all__ = [ 'get_task_by_id',
+            'output_checker',
+            'get_nodegroups',
+            'Tasks_deploy'
+        ]
+__version__ = '0.1'
+__author__ = 'Ma Libo'
+
 
 import os
 import sys
 import yaml
 from django.utils import timezone
+import subprocess
 
 import json
 
 #from .models import tasks
+
 
 project_path="/opt/test/saltmgt/"
 salt_path="/srv/salt/"
@@ -37,6 +48,33 @@ def get_task_by_id(tid):
     else:
         task_queue = tasks.objects.select_related().get(pk=tid)
     return task_queue
+
+def get_or_create_minions():
+    '''This func get the minions list from local host
+    and returns a minions list'''
+
+    cmd = "sudo salt-key -L --out=json"
+
+    from autocd.models import minions
+    try:
+        run_process = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        # try to decode from output and convert to json dict
+        #minion_list_json = json.loads(run_process.stdout.decode())
+        minion_list_json = {'minions': ['beul2017.fs86.vwf.vwfs-ad', 'beul2018', 'ccs_cons_app_fscnbesa0025', 'cpg_cons_app01', 'cpg_int_app01', 'cpg_prod_app01', 'cpg_prod_web01', 'DB_CONS_FSCNBEN06001', 'DB_CONS_FSCNBEN06002', 'fsco_cons_app01', 'fsco_cons_frontend', 'fsco_dev_app01', 'fsco_int', 'fsco_prod_app01', 'fsco_prod_frontend'], 'minions_rejected': [], 'minions_denied': [], 'minions_pre': []}
+        for minion in minion_list_json['minions']:
+            print ("add minions", minion)
+            try:
+                minions.objects.get_or_create(minion_name=minion, status='online')
+            except:
+                # ignore add error
+                logging.warning("minion {0} checked".format(minion))
+
+        return minions.objects.all()
+
+    except Exception as err:
+        raise logging.warning("error when geting minion list", err)
+        return None
+
 
 def output_checker(strings):
 
@@ -204,12 +242,11 @@ class Tasks_deploy():
 
                 # cmd = core deploy function, it call salt of master to deploy
                 # application by nodegroups, e.g. minion_group
-                self.cmd = ('/usr/bin/salt -t120 -N {0} state.apply {1} pillar="{2}" --out-json'\
+                self.cmd = ('/usr/bin/salt -t120 -N {0} state.apply {1} pillar="{2}" --out=json'\
                         .format(str(self.minion_group).lower(), state_sls, pillar_data)
                         )
                 print (self.cmd)
                 self.ret['msg']['cmd'].append(self.cmd)
-                sys.exit()
 
                 try:
                     run_process = subprocess.run(self.cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -252,13 +289,19 @@ class Tasks_deploy():
 
     def report_status(self):
         '''task status: processing, ok, failure'''
-        if self.deploy():
+        if self.ret['msg']['status']:
             self.task.status = "done"
             self.task.env.current_version = str(self.ret['version_number'])
+            self.task.env.update_on = timezone.now()
+            print (str(self.ret['version_number']))
             #self.task.result = self.cmd
             self.task.result = json.dumps(self.ret)
+            self.task.date = timezone.now()
             print (self.ret)
             self.task.save()
+            self.task.env.save()
+            #print (self.task.env.current_version)
+            #print (self.task.env_id)
             return True
         else:
             self.task.status = "failed"
@@ -279,6 +322,10 @@ def deploy_task(task_id):
     else:
         return False
 
+def load_minions_task():
+
+    return get_or_create_minions()
+
 if __name__ == '__main__':
     import django
     django.setup()
@@ -287,4 +334,5 @@ if __name__ == '__main__':
 #
     for k,v in os.environ.items():
         print((k,v))
-    deploy_task(19)
+    #deploy_task(37)
+    print (load_minions_task())

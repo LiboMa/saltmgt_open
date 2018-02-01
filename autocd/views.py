@@ -12,6 +12,7 @@ from .models import projects
 #from .models import deploy_env
 from .models import  MGDeployEnv as deploy_env
 from .models import tasks
+from .models import minions
 
 from accounts.models import UserPrivileges
 
@@ -113,7 +114,7 @@ def deploy_new(request, deploy_env_id):
             # insert into db
             new_task = tasks.objects.create(deploy_url=data.get('deploy_url'),
                                             env_id=data.get('deploy_env_id'),
-                                            owner="dkx4oih",
+                                            owner=request.user.first_name+' '+request.user.last_name,
                                             status="pending"
                                             )
             env_obj = deploy_env.objects.get(pk=deploy_env_id)
@@ -272,6 +273,7 @@ def hook_tasks(task):
     print(task.result)
 
 
+@login_required(login_url='/accounts/login/')
 def tasks_detail(request, task_id=None):
     if task_id is None:
         task_list = tasks.objects.select_related().all()
@@ -282,6 +284,7 @@ def tasks_detail(request, task_id=None):
         return HttpResponse("Result:".format(task.result))
 
 
+@login_required(login_url='/accounts/login/')
 def show_task_result(request, task_id):
     msg = []
     if task_id:
@@ -290,8 +293,8 @@ def show_task_result(request, task_id):
             result = json.loads(task.result)
         except Exception as error_msg:
             #msg.append("no output,:{0}".format(error_msg))
-            #msg.append("no output: {0}".format(error_msg))
             result = None
+            msg = error_msg
 
         context = {'result': result,
                 'task': task,
@@ -299,3 +302,75 @@ def show_task_result(request, task_id):
                 }
         #return HttpResponse("Result of #{0}: {1}".format(task.id, result['msg'] ))
         return render(request, './task_result.html', context)
+
+@login_required(login_url='/accounts/login/')
+def miniongroups_view(request, minion_reload=None):
+    msg = []
+    #return HttpResponse(request.GET.get('minion_reload'))
+    if request.GET.get('minion_reload'):
+        try:
+            #load minions
+            task_qid = async( 'autocd.task_handler.load_minions_task', sync=True )
+            task = fetch(task_qid)
+            minion_list = minions.objects.all()
+            miniongroups_list = minion_groups.objects.all()
+            #return HttpResponse(task)
+        except Exception as error_msg:
+            msg.append(error_msg)
+            minion_list = None
+
+    else:
+        minion_list = minions.objects.all()
+        miniongroups_list = minion_groups.objects.all()
+
+    context = {'minion_list': minion_list,
+            'miniongroups_list': miniongroups_list,
+            'error_msg': msg
+            }
+
+    return render(request, './minions.html', context)
+
+
+@login_required(login_url='/accounts/login/')
+def miniongroups_change(request, miniongroup_id):
+    msg = []
+    mgs_obj = minion_groups.objects.get(pk=miniongroup_id)
+    #return HttpResponse(request.user.username)
+
+    if request.method == 'POST':
+
+        _selected_minions = request.POST.getlist('selected_minions')
+
+        print (_selected_minions)
+        # clear mgs_obj
+        mgs_obj.minions_set.clear()
+
+        try:
+            # set mimion to groups
+            for minion in _selected_minions:
+                _m_obj = minions.objects.get(minion_name=minion)
+                #print ("Add minion{0} to group {1}".format(minion, mgs_obj))
+                _m_obj.groups_name.add(mgs_obj)
+                _m_obj.save()
+
+        except Exception as error_msg:
+            return HttpResponse(error_msg)
+
+        # save minion groups
+        mgs_obj.save()
+        #m_obj.save()
+        return redirect('/autocd/miniongroups/')
+    else:
+        try:
+            minions_obj = minions.objects.all()
+
+        except Exception as error_msg:
+            msg.append(error_msg)
+            m_obj = None
+            mgs_obj = None
+
+        context = {'minions': minions_obj,
+                'mgs_obj': mgs_obj,
+                'error_msg': msg
+                }
+        return render(request, './change_minion.html', context)

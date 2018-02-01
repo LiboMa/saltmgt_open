@@ -15,7 +15,7 @@
 {% block content %}
 <div class="container">
   <h1>Project Deploy Environments</h1>
-    <a class="btn btn-primary" href="./mgdeployenv/add/">New Env</a>
+    <a class="btn btn-primary " href="./mgdeployenv/add/">New Env</a>
     <!-- <a class="btn btn-primary" href="/admin/autocd/mgdeployenv/add/">New Env</a> -->
   <table class="table table-dark table-hover">
     <thead>
@@ -55,9 +55,11 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>project_name</th>
-        <th>implementing_version</th>
-        <th>update_on</th>
+        <th>Project</th>
+        <th>Env</th>
+        <th>Version</th>
+        <th>Operator</th>
+        <th>Date</th>
         <th>Status</th>
       </tr>
     </thead>
@@ -67,8 +69,10 @@
                 <tr>
               <td>{{ task.id }}</a></td>
               <td>{{ task.env.project_name }}</td>
+              <td>{{ task.env }}</td>
               <td>{{ task.deploy_url }}</td>
-              <td>{{ task.date }}</td>
+              <td>{{ task.owner }}</td>
+              <td>{{ task.date|date:'H:t:s  Y-m-d' }}</td>
                     {% if task.status == 'done'%}
                     <td><a class="badge badge-success" href="/autocd/result/{{ task.id }}">{{ task.status }}</td>
                     {%elif task.status == 'failed' %}

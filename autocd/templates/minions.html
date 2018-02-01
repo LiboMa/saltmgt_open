@@ -1,0 +1,48 @@
+{% extends "admin/bs.html" %}
+
+{% block content %}
+
+{% if error_msg %}                                                                                                                
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">                                                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            <strong>Woops!{{error_msg }}</strong>
+      </div>    
+{% endif %}
+
+<div class="container">
+  <h2> Minion Groups List</h2>
+  <div class="float-right"><a class="btn btn-sm btn-secondary" href="./?minion_reload=True">Reload</a></div>
+
+  <table class="table table-md table-dark table-hover">
+    <thead class="">
+      <tr>
+        <th>Minion groups</th>
+        <th>Minion</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+			{% if miniongroups_list %}
+					{% for miniongroup in miniongroups_list %}
+						<tr>
+								<td> {{ miniongroup.group_name }} </td>
+                <td>{% if miniongroup.group_name %}
+                        
+					              {% for minion_name in miniongroup.minions_set.all %}
+                            <p class='badge badge-default'> {{ minion_name }} </p>
+                        {% endfor %}
+                    {% endif %}
+                </td>
+                <td> <a class="btn btn-primary btn-md" href="./{{miniongroup.id}}/change/">Change</a></td>
+						</tr>
+					{% endfor %}
+			{% else %}
+					<p>No minions are available.</p>
+			{% endif %}
+
+    </tbody>
+  </table>
+
+</div>
+
+
+{% endblock %}
