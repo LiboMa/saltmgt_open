@@ -6,12 +6,13 @@ data={ "beul2018": { "file_|-/opt/salt_test/wwwroot/FSChinaOnlineAdminProxy_|-/o
 
 total_rst=[]
 
-#print ([ (k,sk,v[sk]['result'] for sk,sv in v.items()) for k,v in data.items()])
-for sk,sv in v.items():
-    print(k,sk, v[sk]['result'])
-    total_rst.append(v[sk]['result'])
 
-    #print (k,v['file_|-/opt/salt_test/wwwroot/FSChinaOnlineAdminProxy_|-/opt/salt_test/wwwroot/FSChinaOnlineAdminProxy_|-recurse']['result'])
+for k,v in data.items():
+    for sk,sv in v.items():
+        print(k,sk,v[sk]['comment'],v[sk]['result'])
+        total_rst.append(v[sk]['result'])
+
+        #print (k,v['file_|-/opt/salt_test/wwwroot/FSChinaOnlineAdminProxy_|-/opt/salt_test/wwwroot/FSChinaOnlineAdminProxy_|-recurse']['result'])
 
 if not False in total_rst:
   print ("True")

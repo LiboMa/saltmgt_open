@@ -154,4 +154,4 @@ class ActiveDirectoryAuthenticationBackend():
 if __name__ == '__main__':
 
     auth = ActiveDirectoryAuthenticationBackend()
-    print(auth.authenticate('dkx4oih','example here'))
+    print(auth.authenticate('testuser','example here'))

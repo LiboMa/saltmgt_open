@@ -23,7 +23,7 @@ def ad_search_by_user_id(rd_AD_SAM, password):
     adFltr= "(&(sAMAccountName=" + rd_AD_SAM  + "))"
 
     s = Server(AD_DNS_NAME, port = AD_LDAP_PORT, get_info = None)
-    c = Connection(s,user="cnvwfs02\\dkx4oih",password=password',auto_bind=AUTO_BIND_NO_TLS, client_strategy =SYNC, check_names=True, read_only=True, authentication=NTLM)
+    c = Connection(s,user="cnvwfs02\\testuser",password=password',auto_bind=AUTO_BIND_NO_TLS, client_strategy =SYNC, check_names=True, read_only=True, authentication=NTLM)
     rst=c.search(
             search_base=AD_SEARCH_DN,
             search_filter=adFltr,
@@ -38,6 +38,6 @@ def ad_search_by_user_id(rd_AD_SAM, password):
     c.unbind()
 
 
-mail=ad_search_by_user_id('DKX4OIH')
+mail=ad_search_by_user_id('testuser')
 print (mail,"type:",str(type(mail)))
 

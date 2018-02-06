@@ -7,7 +7,7 @@
 #from autocd.autocd_keeper import *
 
 # version=1.0
-# written by dkx4oih(Ma Libo)@ 2018.1.23
+# written by testuser(Ma Libo)@ 2018.1.23
 from __future__ import barry_as_FLUFL
 __all__ = [ 'get_task_by_id',
             'output_checker',
@@ -59,8 +59,7 @@ def get_or_create_minions():
     try:
         run_process = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         # try to decode from output and convert to json dict
-        #minion_list_json = json.loads(run_process.stdout.decode())
-        minion_list_json = {'minions': ['beul2017.fs86.vwf.vwfs-ad', 'beul2018', 'ccs_cons_app_fscnbesa0025', 'cpg_cons_app01', 'cpg_int_app01', 'cpg_prod_app01', 'cpg_prod_web01', 'DB_CONS_FSCNBEN06001', 'DB_CONS_FSCNBEN06002', 'fsco_cons_app01', 'fsco_cons_frontend', 'fsco_dev_app01', 'fsco_int', 'fsco_prod_app01', 'fsco_prod_frontend'], 'minions_rejected': [], 'minions_denied': [], 'minions_pre': []}
+        minion_list_json = json.loads(run_process.stdout.decode())
         for minion in minion_list_json['minions']:
             print ("add minions", minion)
             try:

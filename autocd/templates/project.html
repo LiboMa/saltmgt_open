@@ -51,7 +51,7 @@
 <div class="container">
   <h2>Tasks list</h2>
   <p></p>            
-  <table class="table table-dark table-hover">
+  <table id="tasktable"class="table table-dark table-hover">
     <thead>
       <tr>
         <th>#</th>
@@ -143,6 +143,21 @@
 <!--<script src='/static/js/confirm.js'></script> -->
 <script>
 
+/*<!--$(document).ready(function() {
+	var table=$('#tasktable').DataTable({
+         ordering: true,
+         info: true,
+	   		// table scroll
+         //scrollY:"30vh",
+         scrollY: "450px",
+          //scrollX: true,
+         scrollCollapse:true,
+         paging: false,
+         select: true,
+  
+  });
+})-->*/
+
     function delete_env(dev_id, project_id){
     
         var url="./mgdeployenv/"+dev_id+"/delete/";
@@ -156,7 +171,8 @@
                            window.location.reload();
                            });
         });
-    }
+    };
+
 </script>
 
 

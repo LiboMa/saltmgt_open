@@ -297,11 +297,15 @@ def show_task_result(request, task_id):
             msg = error_msg
 
         context = {'result': result,
+        #           'result_err': result['msg']['err'],
+                   'result_out': json.loads(result['msg']['out']),
                 'task': task,
                 'error_msg': msg
                 }
-        #return HttpResponse("Result of #{0}: {1}".format(task.id, result['msg'] ))
+
+        #return HttpResponse("{0}".format(context['result_out']["beul2018"]['file_|-/opt/salt_test/wwwroot/FSChinaOnlineAdminProxy_|-/opt/salt_test/wwwroot/FSChinaOnlineAdminProxy_|-recurse']['name']))
         return render(request, './task_result.html', context)
+
 
 @login_required(login_url='/accounts/login/')
 def miniongroups_view(request, minion_reload=None):

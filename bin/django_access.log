@@ -1,251 +1,1226 @@
-18:11:16 [Q] INFO Q Cluster-25480 starting.
-18:11:16 [Q] INFO Process-1:1 ready for work at 25484
-18:11:16 [Q] INFO Process-1:2 ready for work at 25485
-18:11:16 [Q] INFO Process-1:3 monitoring at 25486
-18:11:16 [Q] INFO Process-1:4 pushing tasks at 25487
-18:11:16 [Q] INFO Process-1 guarding cluster at 25483
-18:11:16 [Q] INFO Q Cluster-25480 running.
-18:11:16 [Q] INFO Process-1:1 processing [undress-zebra-blossom-failed]
-downloading files from url: http://10.42.67.6:9999/repository/vwfs-yaml/vwfs/fso-release/18.01.16.03/fso-release-18.01.16.03.yaml
+[05/Feb/2018 16:05:30] "GET /autocd/ HTTP/1.1" 200 9080
+[05/Feb/2018 16:05:35] "GET /autocd/deploy/1/ HTTP/1.1" 200 10346
+16:05:37 [Q] INFO Enqueued 36
+[05/Feb/2018 16:05:37] "POST /autocd/deploy/1/new/ HTTP/1.1" 302 0
+[05/Feb/2018 16:05:37] "GET /autocd/project/1/ HTTP/1.1" 200 9802
+[05/Feb/2018 16:05:39] "GET /autocd/result/52 HTTP/1.1" 301 0
+Internal Server Error: /autocd/result/52/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.downloading files from url: http://10.42.67.6:9999/repository/vwfs-yaml/vwfs/fso-release/18.01.16.03/fso-release-18.01.16.03.yaml
 local run: command: rm -rf /srv/salt/fso/test/temp/
 making dir /srv/salt/fso/test/temp/
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-api-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-api >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-api get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-api /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-backend-api/\nfs-china-online-backend-api/Global.asax\nfs-china-online-backend-api/Web.config\nfs-china-online-backend-api/packages.config\nfs-china-online-backend-api/unity.config\ndeleting fs-china-online-backend-api/bin/Unity.WebApi.dll\ndeleting fs-china-online-backend-api/bin/Microsoft.Practices.Unity.xml\ndeleting fs-china-online-backend-api/bin/Microsoft.Practices.Unity.dll\ndeleting fs-china-online-backend-api/bin/Microsoft.Practices.Unity.RegistrationByConvention.xml\ndeleting fs-china-online-backend-api/bin/Microsoft.Practices.Unity.RegistrationByConvention.dll\ndeleting fs-china-online-backend-api/bin/Microsoft.Practices.Unity.Configuration.xml\ndeleting fs-china-online-backend-api/bin/Microsoft.Practices.Unity.Configuration.dll\ndeleting fs-china-online-backend-api/bin/Microsoft.Practices.ServiceLocation.xml\ndeleting fs-china-online-backend-api/bin/Microsoft.Practices.ServiceLocation.pdb\ndeleting fs-china-online-backend-api/bin/Microsoft.Practices.ServiceLocation.dll\nfs-china-online-backend-api/bin/\nfs-china-online-backend-api/bin/CommonServiceLocator.dll\nfs-china-online-backend-api/bin/CommonServiceLocator.pdb\nfs-china-online-backend-api/bin/EntityFramework.SqlServer.dll\nfs-china-online-backend-api/bin/EntityFramework.SqlServer.xml\nfs-china-online-backend-api/bin/EntityFramework.dll\nfs-china-online-backend-api/bin/EntityFramework.xml\nfs-china-online-backend-api/bin/HtmlAgilityPack.dll\nfs-china-online-backend-api/bin/HtmlAgilityPack.pdb\nfs-china-online-backend-api/bin/HtmlAgilityPack.xml\nfs-china-online-backend-api/bin/Markdig.dll\nfs-china-online-backend-api/bin/Markdig.xml\nfs-china-online-backend-api/bin/Unity.Abstractions.dll\nfs-china-online-backend-api/bin/Unity.Abstractions.pdb\nfs-china-online-backend-api/bin/Unity.AspNet.WebApi.dll\nfs-china-online-backend-api/bin/Unity.AspNet.WebApi.xml\nfs-china-online-backend-api/bin/Unity.Configuration.dll\nfs-china-online-backend-api/bin/Unity.Configuration.pdb\nfs-china-online-backend-api/bin/Unity.Container.dll\nfs-china-online-backend-api/bin/Unity.Interception.Configuration.dll\nfs-china-online-backend-api/bin/Unity.Interception.Configuration.pdb\nfs-china-online-backend-api/bin/Unity.Interception.dll\nfs-china-online-backend-api/bin/Unity.Interception.pdb\nfs-china-online-backend-api/bin/Unity.RegistrationByConvention.dll\nfs-china-online-backend-api/bin/Unity.RegistrationByConvention.pdb\nfs-china-online-backend-api/bin/Unity.ServiceLocation.dll\nfs-china-online-backend-api/bin/Unity.ServiceLocation.pdb\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.Caching.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.Caching.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.Caching.pdb\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.Exception.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.Logger.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.MarkDownProvider.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.QrCodeProvider.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.QrCodeProvider.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.SmsProvider.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.SmsProvider.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Common.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.DAL.Context.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.DAL.Context.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.DAL.Facade.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.DAL.Facade.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.DataContract.Extension.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.DataContract.Extension.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.DataContract.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.DataContract.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Dgi.Service.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Dgi.Service.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Dgi.Service.pdb\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Domain.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Domain.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Gateway.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Gateway.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Gateway.pdb\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Service.Proxy.Common.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Service.Proxy.Common.dll.config\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Service.WebApi.dll\nfs-china-online-backend-api/bin/VWFSCN.FSOnline.Service.WebApi.xml\nfs-china-online-backend-api/bin/VWFSCN.IT.Common.dll\nfs-china-online-backend-api/bin/VWFSCN.IT.Log.dll\n\nsent 3,088,771 bytes  received 1,993 bytes  1,236,305.60 bytes/sec\ntotal size is 21,258,374  speedup is 6.88\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-api /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-api-1.0.826.zip /srv/salt/fso/test/dmz2/fs-china-online-backend-api.zip
 local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy >/dev/null
 file /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy get done
 local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-backend-pbproxy/\n\nsent 2,291 bytes  received 22 bytes  4,626.00 bytes/sec\ntotal size is 23,678,082  speedup is 10,236.96\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy-1.0.826.zip /srv/salt/fso/test/dmz1/fs-china-online-backend-pbproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-etl-1.0.45.zip -d /srv/salt/fso/test/temp/fs-china-online-etl >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-etl get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-etl /srv/salt/fso/test/dmz3
-b'sending incremental file list\nfs-china-online-etl/\n\nsent 252 bytes  received 20 bytes  544.00 bytes/sec\ntotal size is 4,323,117  speedup is 15,893.81\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-etl /srv/salt/fso/test/dmz3
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-etl-1.0.45.zip /srv/salt/fso/test/dmz3/fs-china-online-etl.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-feproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-feproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-feproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-feproxy /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-backend-feproxy/\nfs-china-online-backend-feproxy/Global.asax\nfs-china-online-backend-feproxy/Web.config\nfs-china-online-backend-feproxy/packages.config\nfs-china-online-backend-feproxy/bin/\nfs-china-online-backend-feproxy/bin/VWFSCN.FSOnline.Service.Proxy.Frontend.dll\nfs-china-online-backend-feproxy/bin/VWFSCN.FSOnline.Service.Proxy.Frontend.xml\n\nsent 4,621 bytes  received 123 bytes  9,488.00 bytes/sec\ntotal size is 2,878,490  speedup is 606.76\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-feproxy /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-feproxy-1.0.826.zip /srv/salt/fso/test/dmz1/fs-china-online-backend-feproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-admproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-admproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-admproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-admproxy /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-backend-admproxy/\nfs-china-online-backend-admproxy/Global.asax\nfs-china-online-backend-admproxy/Web.config\nfs-china-online-backend-admproxy/packages.config\nfs-china-online-backend-admproxy/bin/\nfs-china-online-backend-admproxy/bin/VWFSCN.FSOnline.Common.Logger.dll\nfs-china-online-backend-admproxy/bin/VWFSCN.FSOnline.Service.Proxy.AdminPortal.dll\nfs-china-online-backend-admproxy/bin/VWFSCN.FSOnline.Service.Proxy.AdminPortal.xml\nfs-china-online-backend-admproxy/bin/VWFSCN.FSOnline.Service.Proxy.Common.dll\nfs-china-online-backend-admproxy/bin/VWFSCN.FSOnline.Service.Proxy.Common.dll.config\nfs-china-online-backend-admproxy/bin/VWFSCN.IT.Common.dll\nfs-china-online-backend-admproxy/bin/VWFSCN.IT.Log.dll\n\nsent 49,097 bytes  received 222 bytes  98,638.00 bytes/sec\ntotal size is 3,497,105  speedup is 70.91\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-admproxy /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-admproxy-1.0.826.zip /srv/salt/fso/test/dmz2/fs-china-online-backend-admproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-admin-portal-1.1.14.145.zip -d /srv/salt/fso/test/temp/fs-china-online-admin-portal >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-admin-portal get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-admin-portal /srv/salt/fso/test/dmz2
-b'sending incremental file list\ndeleting fs-china-online-admin-portal/vendor.666ee354b72bd54ea712.js\ndeleting fs-china-online-admin-portal/manifest.e32391e5657b4275f457.js\ndeleting fs-china-online-admin-portal/main.805ab96d113f6b672f71610d9b4ebf16.css\ndeleting fs-china-online-admin-portal/main.15d0ab56986aaa051008.js\nfs-china-online-admin-portal/\nfs-china-online-admin-portal/env.js\nfs-china-online-admin-portal/index.html\nfs-china-online-admin-portal/jquery-ui.min.js\nfs-china-online-admin-portal/jquery.min.js\nfs-china-online-admin-portal/main.a131759afd1a8d4b4d3f7be9a4117364.css\nfs-china-online-admin-portal/main.e868e69e182c28acbe82.js\nfs-china-online-admin-portal/manifest.069dd24f0b0401241378.js\nfs-china-online-admin-portal/vendor.27cf2c0926776f42dd3d.js\nfs-china-online-admin-portal/static/\nfs-china-online-admin-portal/static/fonts/\nfs-china-online-admin-portal/static/fonts/fontawesome-webfont.674f50d.eot\nfs-china-online-admin-portal/static/fonts/fontawesome-webfont.af7ae50.woff2\nfs-china-online-admin-portal/static/fonts/fontawesome-webfont.b06871f.ttf\nfs-china-online-admin-portal/static/fonts/fontawesome-webfont.fee66e7.woff\nfs-china-online-admin-portal/static/fonts/glyphicons-halflings-regular.448c34a.woff2\nfs-china-online-admin-portal/static/fonts/glyphicons-halflings-regular.e18bbf6.ttf\nfs-china-online-admin-portal/static/fonts/glyphicons-halflings-regular.f4769f9.eot\nfs-china-online-admin-portal/static/fonts/glyphicons-halflings-regular.fa27723.woff\nfs-china-online-admin-portal/static/img/\nfs-china-online-admin-portal/static/img/fontawesome-webfont.912ec66.svg\nfs-china-online-admin-portal/static/img/glyphicons-halflings-regular.8988968.svg\n\nsent 1,059,462 bytes  received 649 bytes  2,120,222.00 bytes/sec\ntotal size is 2,745,450  speedup is 2.59\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-admin-portal /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-admin-portal-1.1.14.145.zip /srv/salt/fso/test/dmz2/fs-china-online-admin-portal.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-client-1.6.50.1608.zip -d /srv/salt/fso/test/temp/fs-china-online-client >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-client get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-client /srv/salt/fso/test/dmz1
-b'sending incremental file list\ndeleting fs-china-online-client/assets/webtrends.ec720d6c7fb4b91fe701.js\ndeleting fs-china-online-client/assets/vendor.76b5bfef7ed7aeb54cf9.js\ndeleting fs-china-online-client/assets/manifest.00966c34988badf52fbc.js\ndeleting fs-china-online-client/assets/dealer.d76f0935dd671a3709f6.js\ndeleting fs-china-online-client/assets/dealer.15f6757547ecbdd042918e0b0545a6c3.css.map\ndeleting fs-china-online-client/assets/dealer.15f6757547ecbdd042918e0b0545a6c3.css\ndeleting fs-china-online-client/assets/customer.8a59acf63cdafd7967a057d7d17914ab.css.map\ndeleting fs-china-online-client/assets/customer.8a59acf63cdafd7967a057d7d17914ab.css\ndeleting fs-china-online-client/assets/customer.0727d3ed9cedd8fedeee.js\ndeleting fs-china-online-client/assets/\nfs-china-online-client/\nfs-china-online-client/app.css\nfs-china-online-client/app.css.map\nfs-china-online-client/app.js\nfs-china-online-client/app.js.map\nfs-china-online-client/dtmTracking.js\nfs-china-online-client/dtmTracking.js.map\nfs-china-online-client/env.js\nfs-china-online-client/event.js\nfs-china-online-client/index.html\nfs-china-online-client/manifest.js\nfs-china-online-client/manifest.js.map\nfs-china-online-client/vendor.css\nfs-china-online-client/vendor.css.map\nfs-china-online-client/vendor.js\nfs-china-online-client/vendor.js.map\nfs-china-online-client/webtrends.js\nfs-china-online-client/webtrends.js.map\ndeleting fs-china-online-client/fonts/fontawesome-webfont.fee66e7.woff\ndeleting fs-china-online-client/fonts/fontawesome-webfont.b06871f.ttf\ndeleting fs-china-online-client/fonts/fontawesome-webfont.af7ae50.woff2\ndeleting fs-china-online-client/fonts/fontawesome-webfont.674f50d.eot\ndeleting fs-china-online-client/images/step-4-s-i.svg\ndeleting fs-china-online-client/images/step-4-b.svg\ndeleting fs-china-online-client/images/step-3-s-i.svg\ndeleting fs-china-online-client/images/step-3-b.svg\ndeleting fs-china-online-client/images/step-2-s-i.svg\ndeleting fs-china-online-client/images/step-2-b.svg\ndeleting fs-china-online-client/images/step-1-b.svg\ndeleting fs-china-online-client/images/fontawesome-webfont.acf3dcb.svg\nfs-china-online-client/dealer/\nfs-china-online-client/dealer/app.css\nfs-china-online-client/dealer/app.css.map\nfs-china-online-client/dealer/app.js\nfs-china-online-client/dealer/app.js.map\nfs-china-online-client/dealer/dtmTracking.js\nfs-china-online-client/dealer/dtmTracking.js.map\nfs-china-online-client/dealer/env.js\nfs-china-online-client/dealer/event.js\nfs-china-online-client/dealer/index.html\nfs-china-online-client/dealer/manifest.js\nfs-china-online-client/dealer/manifest.js.map\nfs-china-online-client/dealer/vendor.css\nfs-china-online-client/dealer/vendor.css.map\nfs-china-online-client/dealer/vendor.js\nfs-china-online-client/dealer/vendor.js.map\nfs-china-online-client/dealer/webtrends.js\nfs-china-online-client/dealer/webtrends.js.map\nfs-china-online-client/dealer/fonts/\nfs-china-online-client/dealer/fonts/fontawesome-webfont.eot\nfs-china-online-client/dealer/fonts/fontawesome-webfont.ttf\nfs-china-online-client/dealer/fonts/fontawesome-webfont.woff\nfs-china-online-client/dealer/fonts/fontawesome-webfont.woff2\nfs-china-online-client/dealer/images/\nfs-china-online-client/dealer/images/applicant.svg\nfs-china-online-client/dealer/images/applicant_v2.svg\nfs-china-online-client/dealer/images/application.svg\nfs-china-online-client/dealer/images/asset-16.svg\nfs-china-online-client/dealer/images/asset-17.svg\nfs-china-online-client/dealer/images/asset-19.svg\nfs-china-online-client/dealer/images/asset-21.svg\nfs-china-online-client/dealer/images/badge-blue.svg\nfs-china-online-client/dealer/images/badge-red.svg\nfs-china-online-client/dealer/images/budget-circle-icon.svg\nfs-china-online-client/dealer/images/calculation.svg\nfs-china-online-client/dealer/images/campaign-indicator.png\nfs-china-online-client/dealer/images/campaign-indicator.svg\nfs-china-online-client/dealer/images/car-circle-icon.svg\nfs-china-online-client/dealer/images/corner.png\nfs-china-online-client/dealer/images/dealer-default-vehicle.svg\nfs-china-online-client/dealer/images/delete.svg\nfs-china-online-client/dealer/images/edit.svg\nfs-china-online-client/dealer/images/grey-car.svg\nfs-china-online-client/dealer/images/grey-coins.svg\nfs-china-online-client/dealer/images/grey-proxy.svg\nfs-china-online-client/dealer/images/homepage-white.svg\nfs-china-online-client/dealer/images/homepage.svg\nfs-china-online-client/dealer/images/loan.svg\nfs-china-online-client/dealer/images/log-in-white.svg\nfs-china-online-client/dealer/images/log-out-white.svg\nfs-china-online-client/dealer/images/logout-icon.svg\nfs-china-online-client/dealer/images/menu-icon.svg\nfs-china-online-client/dealer/images/menu-white.svg\nfs-china-online-client/dealer/images/minus.svg\nfs-china-online-client/dealer/images/new-profile-icon.svg\nfs-china-online-client/dealer/images/orcode-grey.svg\nfs-china-online-client/dealer/images/orcode.svg\nfs-china-online-client/dealer/images/plus-copy-4.svg\nfs-china-online-client/dealer/images/profile-icon.svg\nfs-china-online-client/dealer/images/register-white.svg\nfs-china-online-client/dealer/images/rmb.svg\nfs-china-online-client/dealer/images/scroll-to-top.svg\nfs-china-online-client/dealer/images/share.svg\nfs-china-online-client/dealer/images/share_v2.svg\nfs-china-online-client/dealer/images/step-1-b-s_v3.svg\nfs-china-online-client/dealer/images/step-1-b_v3.svg\nfs-china-online-client/dealer/images/step-2-b-s_v3.svg\nfs-china-online-client/dealer/images/step-2-b_v3.svg\nfs-china-online-client/dealer/images/step-2-g_v3.svg\nfs-china-online-client/dealer/images/step-3-b-s_v3.svg\nfs-china-online-client/dealer/images/step-3-b_v3.svg\nfs-china-online-client/dealer/images/step-3-g_v3.svg\nfs-china-online-client/dealer/images/step-4-b_v3.svg\nfs-china-online-client/dealer/images/step-4-g_v3.svg\nfs-china-online-client/dealer/images/tips.png\nfs-china-online-client/dealer/images/tools.svg\nfs-china-online-client/dealer/images/trangle.svg\nfs-china-online-client/dealer/images/vw-logo-white.png\nfs-china-online-client/dealer/images/vw_finance_logo_dealer.png\nfs-china-online-client/dealer/images/vwfs-logo.png\nfs-china-online-client/fonts/\nfs-china-online-client/fonts/fontawesome-webfont.eot\nfs-china-online-client/fonts/fontawesome-webfont.ttf\nfs-china-online-client/fonts/fontawesome-webfont.woff\nfs-china-online-client/fonts/fontawesome-webfont.woff2\nfs-china-online-client/images/\nfs-china-online-client/images/applicant.svg\nfs-china-online-client/images/applicant_v2.svg\nfs-china-online-client/images/application.svg\nfs-china-online-client/images/asset-16.svg\nfs-china-online-client/images/asset-17.svg\nfs-china-online-client/images/asset-19.svg\nfs-china-online-client/images/asset-21.svg\nfs-china-online-client/images/badge-blue.svg\nfs-china-online-client/images/badge-red.svg\nfs-china-online-client/images/budget-circle-icon.svg\nfs-china-online-client/images/calculation.svg\nfs-china-online-client/images/campaign-indicator.png\nfs-china-online-client/images/campaign-indicator.svg\nfs-china-online-client/images/car-circle-icon.svg\nfs-china-online-client/images/corner.png\nfs-china-online-client/images/dealer-default-vehicle.svg\nfs-china-online-client/images/delete.svg\nfs-china-online-client/images/edit.svg\nfs-china-online-client/images/grey-car.svg\nfs-china-online-client/images/grey-coins.svg\nfs-china-online-client/images/grey-proxy.svg\nfs-china-online-client/images/homepage-white.svg\nfs-china-online-client/images/homepage.svg\nfs-china-online-client/images/loan.svg\nfs-china-online-client/images/log-in-white.svg\nfs-china-online-client/images/log-out-white.svg\nfs-china-online-client/images/logout-icon.svg\nfs-china-online-client/images/menu-icon.svg\nfs-china-online-client/images/menu-white.svg\nfs-china-online-client/images/minus.svg\nfs-china-online-client/images/new-profile-icon.svg\nfs-china-online-client/images/orcode-grey.svg\nfs-china-online-client/images/orcode.svg\nfs-china-online-client/images/plus-copy-4.svg\nfs-china-online-client/images/profile-icon.svg\nfs-china-online-client/images/register-white.svg\nfs-china-online-client/images/rmb.svg\nfs-china-online-client/images/scroll-to-top.svg\nfs-china-online-client/images/share.svg\nfs-china-online-client/images/share_v2.svg\nfs-china-online-client/images/step-1-b-s_v3.svg\nfs-china-online-client/images/step-1-b_v3.svg\nfs-china-online-client/images/step-2-b-s_v3.svg\nfs-china-online-client/images/step-2-b_v3.svg\nfs-china-online-client/images/step-2-g_v3.svg\nfs-china-online-client/images/step-3-b-s_v3.svg\nfs-china-online-client/images/step-3-b_v3.svg\nfs-china-online-client/images/step-3-g_v3.svg\nfs-china-online-client/images/step-4-b_v3.svg\nfs-china-online-client/images/step-4-g_v3.svg\nfs-china-online-client/images/tips.png\nfs-china-online-client/images/tools.svg\nfs-china-online-client/images/trangle.svg\nfs-china-online-client/images/vw-logo-white.png\nfs-china-online-client/images/vw_finance_logo_dealer.png\nfs-china-online-client/images/vwfs-logo.png\n\nsent 5,751,849 bytes  received 4,323 bytes  1,644,620.57 bytes/sec\ntotal size is 22,070,510  speedup is 3.83\n'18:11:28 [Q] INFO Processed [undress-zebra-blossom-failed]
-18:18:46 [Q] INFO Process-1:2 processing [kitten-snake-sad-johnny]
-downloading files from url: http://10.42.67.6:9999/repository/vwfs-yaml/vwfs/fso-release/18.01.16.03/fso-release-18.01.16.03.yaml
-local run: command: rm -rf /srv/salt/fso/test/temp/
-making dir /srv/salt/fso/test/temp/
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-api-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-api >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-api get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-api /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-backend-api/\n\nsent 3,000 bytes  received 21 bytes  6,042.00 bytes/sec\ntotal size is 21,258,374  speedup is 7,036.87\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-api /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-api-1.0.826.zip /srv/salt/fso/test/dmz2/fs-china-online-backend-api.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-backend-pbproxy/\n\nsent 2,291 bytes  received 22 bytes  4,626.00 bytes/sec\ntotal size is 23,678,082  speedup is 10,236.96\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy-1.0.826.zip /srv/salt/fso/test/dmz1/fs-china-online-backend-pbproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-etl-1.0.45.zip -d /srv/salt/fso/test/temp/fs-china-online-etl >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-etl get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-etl /srv/salt/fso/test/dmz3
-b'sending incremental file list\nfs-china-online-etl/\n\nsent 253 bytes  received 20 bytes  546.00 bytes/sec\ntotal size is 4,323,117  speedup is 15,835.59\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-etl /srv/salt/fso/test/dmz3
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-etl-1.0.45.zip /srv/salt/fso/test/dmz3/fs-china-online-etl.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-feproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-feproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-feproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-feproxy /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-backend-feproxy/\n\nsent 564 bytes  received 21 bytes  1,170.00 bytes/sec\ntotal size is 2,878,490  speedup is 4,920.50\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-feproxy /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-feproxy-1.0.826.zip /srv/salt/fso/test/dmz1/fs-china-online-backend-feproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-admproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-admproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-admproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-admproxy /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-backend-admproxy/\n\nsent 966 bytes  received 21 bytes  1,974.00 bytes/sec\ntotal size is 3,497,105  speedup is 3,543.17\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-admproxy /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-admproxy-1.0.826.zip /srv/salt/fso/test/dmz2/fs-china-online-backend-admproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-admin-portal-1.1.14.145.zip -d /srv/salt/fso/test/temp/fs-china-online-admin-portal >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-admin-portal get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-admin-portal /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-admin-portal/\n\nsent 774 bytes  received 23 bytes  1,594.00 bytes/sec\ntotal size is 2,745,450  speedup is 3,444.73\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-admin-portal /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-admin-portal-1.1.14.145.zip /srv/salt/fso/test/dmz2/fs-china-online-admin-portal.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-client-1.6.50.1608.zip -d /srv/salt/fso/test/temp/fs-china-online-client >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-client get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-client /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-client/\n\nsent 3,225 bytes  received 25 bytes  6,500.00 bytes/sec\ntotal size is 22,070,510  speedup is 6,790.93\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-client /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-client-1.6.50.1608.zip /srv/salt/fso/test/dmz1/fs-china-online-client.zip
-/usr/bin/salt -t120 -N fso_test_all state.apply fso/fso_test_all pillar="{'API_ImagesRoot': 'D:\\wwwRoot\\images', 'API_DCPApplicantURL': 'http://10.42.84.212:8085/DataApi/ApplicantApi.ashx', 'API_TestVerificationCode': 99999, 'ImagesRewrite': 'http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}', 'SwaggerRootUrl': 'https://114.247.183.89', 'API_ConnectionString': 'data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework', 'API_SMSWinService': 'http://fscnbesa2007/smsservice/SMSWinService', 'API_DgiService': 'http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService', 'API_SmsService': 'http://fscnbesa2007/smsservice/SmsService', 'AdminProxy_ProxyURL': 'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy', 'FSOnlineURLAuthority': 'fsonline-api-con.fs86.vwf.vwfs-ad:8081', 'ClientProxy_LogPath': 'C:\\logs\\', 'AdminProxy_LogPath': 'D:\\logs\\', 'API_SMSWinService_servicePrincipalName': 'host/FSCNBEY12102.fs86.vwf.vwfs-ad', 'ClientProxy_ProxyURL': 'cons.vwfs-online.com/proxy', 'API_DCPLeadURL': 'http://10.42.84.212:8085/DataApi/LeadApi.ashx', 'API_LogPath': 'D:\\logs\\'}" --out=json
-18.1.16
-{'version_number': '18.1.16', 'msg': {'status': True, 'cmd': ['/usr/bin/salt -t120 -N fso_test_all state.apply fso/fso_test_all pillar="{\'API_ImagesRoot\': \'D:\\\\wwwRoot\\\\images\', \'API_DCPApplicantURL\': \'http://10.42.84.212:8085/DataApi/ApplicantApi.ashx\', \'API_TestVerificationCode\': 99999, \'ImagesRewrite\': \'http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}\', \'SwaggerRootUrl\': \'https://114.247.183.89\', \'API_ConnectionString\': \'data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework\', \'API_SMSWinService\': \'http://fscnbesa2007/smsservice/SMSWinService\', \'API_DgiService\': \'http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService\', \'API_SmsService\': \'http://fscnbesa2007/smsservice/SmsService\', \'AdminProxy_ProxyURL\': \'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy\', \'FSOnlineURLAuthority\': \'fsonline-api-con.fs86.vwf.vwfs-ad:8081\', \'ClientProxy_LogPath\': \'C:\\\\logs\\\\\', \'AdminProxy_LogPath\': \'D:\\\\logs\\\\\', \'API_SMSWinService_servicePrincipalName\': \'host/FSCNBEY12102.fs86.vwf.vwfs-ad\', \'ClientProxy_ProxyURL\': \'cons.vwfs-online.com/proxy\', \'API_DCPLeadURL\': \'http://10.42.84.212:8085/DataApi/LeadApi.ashx\', \'API_LogPath\': \'D:\\\\logs\\\\\'}" --out=json'], 'out': ['"Failed to authenticate! This is most likely because this user is not permitted to execute commands, but there is a small possibility that a disk error occurred (check disk/inode usage)."'], 'err': []}}18:18:52 [Q] INFO Processed [kitten-snake-sad-johnny]
-18:19:51 [Q] INFO Process-1:1 processing [oven-king-echo-snake]
+b'sending incremental file list\nfs-china-online-backend-pbproxy/\n\nsent 2,291 bytes  received 22 bytes  4,626.00 bytes/sec\ntota[05/Feb/2018 16:05:55] "GET /autocd/project/1/ HTTP/1.1" 200 9802
+[05/Feb/2018 16:05:57] "GET /autocd/result/52/ HTTP/1.1" 200 8832
+[05/Feb/2018 16:06:04] "GET /autocd/result/52/ HTTP/1.1" 200 8832
+[05/Feb/2018 16:06:07] "GET /autocd/result/52/ HTTP/1.1" 200 8832
+[05/Feb/2018 16:06:10] "GET /autocd/result/52/ HTTP/1.1" 200 8832
+[05/Feb/2018 16:07:40] "GET /autocd/project/1/ HTTP/1.1" 200 9802
+[05/Feb/2018 16:09:16] "GET /autocd/project/1/ HTTP/1.1" 200 9802
+Performing system checks...
 
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-client /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-client-1.6.50.1608.zip /srv/salt/fso/test/dmz1/fs-china-online-client.zip
-/usr/bin/salt -t120 -N fso_test_all state.apply fso/fso_test_all pillar="{'API_ImagesRoot': 'D:\\wwwRoot\\images', 'API_DCPApplicantURL': 'http://10.42.84.212:8085/DataApi/ApplicantApi.ashx', 'API_TestVerificationCode': 99999, 'ImagesRewrite': 'http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}', 'SwaggerRootUrl': 'https://114.247.183.89', 'API_ConnectionString': 'data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework', 'API_SMSWinService': 'http://fscnbesa2007/smsservice/SMSWinService', 'API_DgiService': 'http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService', 'API_SmsService': 'http://fscnbesa2007/smsservice/SmsService', 'AdminProxy_ProxyURL': 'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy', 'FSOnlineURLAuthority': 'fsonline-api-con.fs86.vwf.vwfs-ad:8081', 'ClientProxy_LogPath': 'C:\\logs\\', 'AdminProxy_LogPath': 'D:\\logs\\', 'API_SMSWinService_servicePrincipalName': 'host/FSCNBEY12102.fs86.vwf.vwfs-ad', 'ClientProxy_ProxyURL': 'cons.vwfs-online.com/proxy', 'API_DCPLeadURL': 'http://10.42.84.212:8085/DataApi/LeadApi.ashx', 'API_LogPath': 'D:\\logs\\'}" --out=json
-18.1.16
-{'version_number': '18.1.16', 'msg': {'status': True, 'cmd': ['/usr/bin/salt -t120 -N fso_test_all state.apply fso/fso_test_all pillar="{\'API_ImagesRoot\': \'D:\\\\wwwRoot\\\\images\', \'API_DCPApplicantURL\': \'http://10.42.84.212:8085/DataApi/ApplicantApi.ashx\', \'API_TestVerificationCode\': 99999, \'ImagesRewrite\': \'http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}\', \'SwaggerRootUrl\': \'https://114.247.183.89\', \'API_ConnectionString\': \'data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework\', \'API_SMSWinService\': \'http://fscnbesa2007/smsservice/SMSWinService\', \'API_DgiService\': \'http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService\', \'API_SmsService\': \'http://fscnbesa2007/smsservice/SmsService\', \'AdminProxy_ProxyURL\': \'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy\', \'FSOnlineURLAuthority\': \'fsonline-api-con.fs86.vwf.vwfs-ad:8081\', \'ClientProxy_LogPath\': \'C:\\\\logs\\\\\', \'AdminProxy_LogPath\': \'D:\\\\logs\\\\\', \'API_SMSWinService_servicePrincipalName\': \'host/FSCNBEY12102.fs86.vwf.vwfs-ad\', \'ClientProxy_ProxyURL\': \'cons.vwfs-online.com/proxy\', \'API_DCPLeadURL\': \'http://10.42.84.212:8085/DataApi/LeadApi.ashx\', \'API_LogPath\': \'D:\\\\logs\\\\\'}" --out=json'], 'out': ['"Failed to authenticate! This is most likely because this user is not permitted to execute commands, but there is a small possibility that a disk error occurred (check disk/inode usage)."'], 'err': []}}
-True
-downloading files from url: http://10.42.67.6:9999/repository/vwfs-yaml/vwfs/fso-release/18.01.16.03/fso-release-18.01.16.03.yaml
-local run: command: rm -rf /srv/salt/fso/test/temp/
-making dir /srv/salt/fso/test/temp/
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-api-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-api >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-api get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-api /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-backend-api/\n\nsent 3,000 bytes  received 21 bytes  6,042.00 bytes/sec\ntotal size is 21,258,374  speedup is 7,036.87\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-api /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-api-1.0.826.zip /srv/salt/fso/test/dmz2/fs-china-online-backend-api.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-backend-pbproxy/\n\nsent 2,290 bytes  received 22 bytes  4,624.00 bytes/sec\ntotal size is 23,678,082  speedup is 10,241.38\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy-1.0.826.zip /srv/salt/fso/test/dmz1/fs-china-online-backend-pbproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-etl-1.0.45.zip -d /srv/salt/fso/test/temp/fs-china-online-etl >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-etl get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-etl /srv/salt/fso/test/dmz3
-b'sending incremental file list\nfs-china-online-etl/\n\nsent 253 bytes  received 20 bytes  546.00 bytes/sec\ntotal size is 4,323,117  speedup is 15,835.59\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-etl /srv/salt/fso/test/dmz3
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-etl-1.0.45.zip /srv/salt/fso/test/dmz3/fs-china-online-etl.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-feproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-feproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-feproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-feproxy /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-backend-feproxy/\n\nsent 564 bytes  received 21 bytes  1,170.00 bytes/sec\ntotal size is 2,878,490  speedup is 4,920.50\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-feproxy /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-feproxy-1.0.826.zip /srv/salt/fso/test/dmz1/fs-china-online-backend-feproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-admproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-admproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-admproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-admproxy /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-backend-admproxy/\n\nsent 967 bytes  received 21 bytes  1,976.00 bytes/sec\ntotal size is 3,497,105  speedup is 3,539.58\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-admproxy /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-admproxy-1.0.826.zip /srv/salt/fso/test/dmz2/fs-china-online-backend-admproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-admin-portal-1.1.14.145.zip -d /srv/salt/fso/test/temp/fs-china-online-admin-portal >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-admin-portal get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-admin-portal /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-admin-portal/\n\nsent 774 bytes  received 23 bytes  1,594.00 bytes/sec\ntotal size is 2,745,450  speedup is 3,444.73\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-admin-portal /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-admin-portal-1.1.14.145.zip /srv/salt/fso/test/dmz2/fs-china-online-admin-portal.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-client-1.6.50.1608.zip -d /srv/salt/fso/test/temp/fs-china-online-client >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-client get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-client /srv/salt/fso/test/dmz118:19:57 [Q] INFO Processed [oven-king-echo-snake]
-18:44:24 [Q] INFO Process-1:2 processing [november-indigo-sweet-michigan]
+System check identified no issues (0 silenced).
+February 05, 2018 - 16:05:29
+Django version 2.0.1, using settings 'saltmgt.settings'
+Starting development server at http://0:8080/
+Quit the server with CONTROL-C.
+<QueryDict: {'csrfmiddlewaretoken': ['EXpSwtYaR6ZU3K0QN8Y3dgNmiVlQ5R6KAEKGwzNHVSrjr7j413bdx9dMqKmbT5QW'], 'pillar': ['API_ConnectionString: data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework \r\nAPI_ImagesRoot: D:\\wwwRoot\\images\r\nAPI_DCPApplicantURL: http://10.42.84.212:8085/DataApi/ApplicantApi.ashx\r\nAPI_DCPLeadURL: http://10.42.84.212:8085/DataApi/LeadApi.ashx\r\nAPI_LogPath: D:\\logs\\\r\nAPI_SMSWinService: http://fscnbesa2007/smsservice/SMSWinService\r\nAPI_SmsService: http://fscnbesa2007/smsservice/SmsService\r\nAPI_SMSWinService_servicePrincipalName: host/FSCNBEY12102.fs86.vwf.vwfs-ad\r\nFSOnlineURLAuthority: fsonline-api-con.fs86.vwf.vwfs-ad:8081\r\nImagesRewrite: http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}\r\nAdminProxy_ProxyURL: fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy\r\nClientProxy_ProxyURL: cons.vwfs-online.com/proxy\r\nClientProxy_LogPath: C:\\logs\\\r\nAdminProxy_LogPath: D:\\logs\\\r\nAPI_TestVerificationCode: 99999\r\nSwaggerRootUrl: https://114.247.183.89\r\nAPI_DgiService: http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    '], 'deploy_url': ['http://10.42.67.6:9999/repository/vwfs-yaml/vwfs/fso-release/18.01.16.03/fso-release-18.01.16.03.yaml'], 'state': ['# This file is used to define how to deploy code by using saltstack syntax\r\n# Written by Ma Libo@2017.5.22\r\n#####\r\n# deploy front end code\r\n\r\nClean_FSChinaOnlineBE:\r\n    file.directory:\r\n        - name: /opt/salt_test/wwwroot/FSChinaOnlineBE\r\n        - clean: True\r\n#        - order: 10000\r\n\r\nClean_FSChinaOnlineAdmin:\r\n    file.directory:\r\n        - name: /opt/salt_test/wwwroot/FSChinaOnlineAdmin\r\n        - clean: True\r\n#        - order: 10000\r\n\r\nClean_FSChinaOnlineAdminProxy:\r\n    file.directory:\r\n        - name: /opt/salt_test/wwwroot/FSChinaOnlineAdminProxy\r\n        - clean: True\r\n#        - order: 10000\r\n\r\n/opt/salt_test/wwwroot/FSChinaOnlineBE:\r\n    file.recurse:\r\n        - mkedirs: True \r\n        - name: /opt/salt_test/wwwroot/FSChinaOnlineBE\r\n        - source: salt://fso/cons/dmz2/fs-china-online-backend-api\r\n\r\n/opt/salt_test/wwwroot/FSChinaOnlineAdmin:\r\n    file.recurse:\r\n        - mkedirs: True\r\n        - name: /opt/salt_test/wwwroot/FSChinaOnlineAdmin\r\n        - source: salt://fso/cons/dmz2/fs-china-online-admin-portal\r\n\r\n/opt/salt_test/wwwroot/FSChinaOnlineAdminProxy:\r\n    file.recurse:\r\n        - mkedirs: True\r\n        - name: /opt/salt_test/wwwroot/FSChinaOnlineAdminProxy\r\n        - source: salt://fso/cons/dmz2/fs-china-online-backend-admproxy\r\n\r\n#generate Backend WebApi config \r\nFSChinaPortal_config:\r\n    file.managed:\r\n        - name: /opt/salt_test/wwwroot/FSChinaOnlineBE/Web.config\r\n        - source: salt://fso/cons/dmz2/fs-china-online-backend-api/Web.config\r\n        - template: jinja\r\n        #- clean: True # This hangs on windows\r\n\r\n#generate AdminPortal proxy config\r\nAdminPortal_proxy_config:\r\n    file.managed:\r\n        - name: /opt/salt_test/wwwroot/FSChinaOnlineAdminProxy/Web.config\r\n        - source: salt://fso/cons/dmz2/fs-china-online-backend-admproxy/Web.config\r\n        - template: jinja\r\n        #- clean: True # This hangs on windows\r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    '], 'deploy_env_id': ['1']}>
+Performing system checks...
 
-True
-downloading files from url: http://10.42.67.6:9999/repository/vwfs-yaml/vwfs/fso-release/18.01.16.03/fso-release-18.01.16.03.yaml
-local run: command: rm -rf /srv/salt/fso/test/temp/
-making dir /srv/salt/fso/test/temp/
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-api-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-api >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-api get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-api /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-backend-api/\n\nsent 3,000 bytes  received 21 bytes  6,042.00 bytes/sec\ntotal size is 21,258,374  speedup is 7,036.87\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-api /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-api-1.0.826.zip /srv/salt/fso/test/dmz2/fs-china-online-backend-api.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-backend-pbproxy/\n\nsent 2,291 bytes  received 22 bytes  4,626.00 bytes/sec\ntotal size is 23,678,082  speedup is 10,236.96\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy-1.0.826.zip /srv/salt/fso/test/dmz1/fs-china-online-backend-pbproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-etl-1.0.45.zip -d /srv/salt/fso/test/temp/fs-china-online-etl >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-etl get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-etl /srv/salt/fso/test/dmz3
-b'sending incremental file list\nfs-china-online-etl/\n\nsent 253 bytes  received 20 bytes  546.00 bytes/sec\ntotal size is 4,323,117  speedup is 15,835.59\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-etl /srv/salt/fso/test/dmz3
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-etl-1.0.45.zip /srv/salt/fso/test/dmz3/fs-china-online-etl.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-feproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-feproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-feproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-feproxy /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-backend-feproxy/\n\nsent 563 bytes  received 21 bytes  1,168.00 bytes/sec\ntotal size is 2,878,490  speedup is 4,928.92\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-feproxy /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-feproxy-1.0.826.zip /srv/salt/fso/test/dmz1/fs-china-online-backend-feproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-admproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-admproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-admproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-admproxy /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-backend-admproxy/\n\nsent 967 bytes  received 21 bytes  1,976.00 bytes/sec\ntotal size is 3,497,105  speedup is 3,539.58\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-admproxy /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-admproxy-1.0.826.zip /srv/salt/fso/test/dmz2/fs-china-online-backend-admproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-admin-portal-1.1.14.145.zip -d /srv/salt/fso/test/temp/fs-china-online-admin-portal >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-admin-portal get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-admin-portal /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-admin-portal/\n\nsent 774 bytes  received 23 bytes  1,594.00 bytes/sec\ntotal size is 2,745,450  speedup is 3,444.73\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-admin-portal /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-admin-portal-1.1.14.145.zip /srv/salt/fso/test/dmz2/fs-china-online-admin-portal.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-client-1.6.50.1608.zip -d /srv/salt/fso/test/temp/fs-china-online-client >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-client get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-client /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-client/\n\nsent 3,226 bytes  received 25 bytes  6,502.00 bytes/sec\ntotal size is 22,070,510  speedup is 6,788.84\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-client /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-client-1.6.50.1608.zip /srv/salt/fso/test/dmz1/fs-china-online-client.zip
-/usr/bin/salt -t120 -N fso_test_all state.apply fso/fso_test_all pillar="{'API_ImagesRoot': 'D:\\wwwRoot\\images', 'API_DCPApplicantURL': 'http://10.42.84.212:8085/DataApi/ApplicantApi.ashx', 'API_TestVerificationCode': 99999, 'ImagesRewrite': 'http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}', 'SwaggerRootUrl': 'https://114.247.183.89', 'API_ConnectionString': 'data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework', 'API_SMSWinService': 'http://fscnbesa2007/smsservice/SMSWinService', 'API_DgiService': 'http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService', 'API_SmsService': 'http://fscnbesa2007/smsservice/SmsService', 'AdminProxy_ProxyURL': 'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy', 'FSOnlineURLAuthority': 'fsonline-api-con.fs86.vwf.vwfs-ad:8081', 'ClientProxy_LogPath': 'C:\\logs\\', 'AdminProxy_LogPath': 'D:\\logs\\', 'API_SMSWinService_servicePrincipalName': 'host/FSCNBEY12102.fs86.vwf.vwfs-ad', 'ClientProxy_ProxyURL': 'cons.vwfs-online.com/proxy', 'API_DCPLeadURL': 'http://10.42.84.212:8085/DataApi/LeadApi.ashx', 'API_LogPath': 'D:\\logs\\'}" --out=json
-18.1.16
-{'version_number': '18.1.16', 'msg': {'status': True, 'cmd': ['/usr/bin/salt -t120 -N fso_test_all state.apply fso/fso_test_all pillar="{\'API_ImagesRoot\': \'D:\\\\wwwRoot\\\\images\', \'API_DCPApplicantURL\': \'http://10.42.84.212:8085/DataApi/ApplicantApi.ashx\', \'API_TestVerificationCode\': 99999, \'ImagesRewrite\': \'http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}\', \'SwaggerRootUrl\': \'https://114.247.183.89\', \'API_ConnectionString\': \'data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework\', \'API_SMSWinService\': \'http://fscnbesa2007/smsservice/SMSWinService\', \'API_DgiService\': \'http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService\', \'API_SmsService\': \'http://fscnbesa2007/smsservice/SmsService\', \'AdminProxy_ProxyURL\': \'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy\', \'FSOnlineURLAuthority\': \'fsonline-api-con.fs86.vwf.vwfs-ad:8081\', \'ClientProxy_LogPath\': \'C:\\\\logs\\\\\', \'AdminProxy_LogPath\': \'D:\\\\logs\\\\\', \'API_SMSWinService_servicePrincipalName\': \'host/FSCNBEY12102.fs86.vwf.vwfs-ad\', \'ClientProxy_ProxyURL\': \'cons.vwfs-online.com/proxy\', \'API_DCPLeadURL\': \'http://10.42.84.212:8085/DataApi/LeadApi.ashx\', \'API_LogPath\': \'D:\\\\logs\\\\\'}" --out=json'], 'out': ['"Failed to authenticate! This is most likely because this user is not permitted to execute commands, but there is a small possibility that a disk error occurred (check disk/inode usage)."'], 'err': []}}18:44:32 [Q] INFO Processed [november-indigo-sweet-michigan]
-18:45:08 [Q] INFO Process-1:1 processing [north-red-april-cat]
+System check identified no issues (0 silenced).
+February 05, 2018 - 16:11:27
+Django version 2.0.1, using settings 'saltmgt.settings'
+Starting development server at http://0:8080/
+Quit the server with CONTROL-C.
+Performing system checks...
 
-b'sending incremental file list\nfs-china-online-client/\n\nsent 3,226 bytes  received 25 bytes  6,502.00 bytes/sec\ntotal size is 22,070,510  speedup is 6,788.84\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-client /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-client-1.6.50.1608.zip /srv/salt/fso/test/dmz1/fs-china-online-client.zip
-/usr/bin/salt -t120 -N fso_test_all state.apply fso/fso_test_all pillar="{'API_ImagesRoot': 'D:\\wwwRoot\\images', 'API_DCPApplicantURL': 'http://10.42.84.212:8085/DataApi/ApplicantApi.ashx', 'API_TestVerificationCode': 99999, 'ImagesRewrite': 'http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}', 'SwaggerRootUrl': 'https://114.247.183.89', 'API_ConnectionString': 'data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework', 'API_SMSWinService': 'http://fscnbesa2007/smsservice/SMSWinService', 'API_DgiService': 'http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService', 'API_SmsService': 'http://fscnbesa2007/smsservice/SmsService', 'AdminProxy_ProxyURL': 'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy', 'FSOnlineURLAuthority': 'fsonline-api-con.fs86.vwf.vwfs-ad:8081', 'ClientProxy_LogPath': 'C:\\logs\\', 'AdminProxy_LogPath': 'D:\\logs\\', 'API_SMSWinService_servicePrincipalName': 'host/FSCNBEY12102.fs86.vwf.vwfs-ad', 'ClientProxy_ProxyURL': 'cons.vwfs-online.com/proxy', 'API_DCPLeadURL': 'http://10.42.84.212:8085/DataApi/LeadApi.ashx', 'API_LogPath': 'D:\\logs\\'}" --out=json
+System check identified no issues (0 silenced).
+February 05, 2018 - 16:11:42
+Django version 2.0.1, using settings 'saltmgt.settings'
+Starting development server at http://0:8080/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 05, 2018 - 16:14:50
+Django version 2.0.1, using settings 'saltmgt.settings'
+Starting development server at http://0:8080/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 05, 2018 - 16:15:17
+Django version 2.0.1, using settings 'saltmgt.settings'
+Starting development server at http://0:8080/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 05, 2018 - 16:25:04
+Django version 2.0.1, using settings 'saltmgt.settings'
+Starting development server at http://0:8080/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 05, 2018 - 16:25:25
+Django version 2.0.1, using settings 'saltmgt.settings'
+Starting development server at http://0:8080/
+Quit the server with CONTROL-C.
+81/Images/{R:1}', 'API_TestVerificationCode': 99999, 'API_SMSWinService': 'http://fscnbesa2007/smsservice/SMSWinService', 'AdminProxy_ProxyURL': 'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy', 'API_ImagesRoot': 'D:\\wwwRoot\\images', 'FSOnlineURLAuthority': 'fsonline-api-con.fs86.vwf.vwfs-ad:8081'}" --out=json
 18.1.16
-{'version_number': '18.1.16', 'msg': {'status': True, 'cmd': ['/usr/bin/salt -t120 -N fso_test_all state.apply fso/fso_test_all pillar="{\'API_ImagesRoot\': \'D:\\\\wwwRoot\\\\images\', \'API_DCPApplicantURL\': \'http://10.42.84.212:8085/DataApi/ApplicantApi.ashx\', \'API_TestVerificationCode\': 99999, \'ImagesRewrite\': \'http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}\', \'SwaggerRootUrl\': \'https://114.247.183.89\', \'API_ConnectionString\': \'data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework\', \'API_SMSWinService\': \'http://fscnbesa2007/smsservice/SMSWinService\', \'API_DgiService\': \'http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService\', \'API_SmsService\': \'http://fscnbesa2007/smsservice/SmsService\', \'AdminProxy_ProxyURL\': \'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy\', \'FSOnlineURLAuthority\': \'fsonline-api-con.fs86.vwf.vwfs-ad:8081\', \'ClientProxy_LogPath\': \'C:\\\\logs\\\\\', \'AdminProxy_LogPath\': \'D:\\\\logs\\\\\', \'API_SMSWinService_servicePrincipalName\': \'host/FSCNBEY12102.fs86.vwf.vwfs-ad\', \'ClientProxy_ProxyURL\': \'cons.vwfs-online.com/proxy\', \'API_DCPLeadURL\': \'http://10.42.84.212:8085/DataApi/LeadApi.ashx\', \'API_LogPath\': \'D:\\\\logs\\\\\'}" --out=json'], 'out': ['"Failed to authenticate! This is most likely because this user is not permitted to execute commands, but there is a small possibility that a disk error occurred (check disk/inode usage)."'], 'err': []}}
-True
-downloading files from url: http://10.42.67.6:9999/repository/vwfs-yaml/vwfs/fso-release/18.01.16.03/fso-release-18.01.16.03.yaml
-local run: command: rm -rf /srv/salt/fso/test/temp/
-making dir /srv/salt/fso/test/temp/
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-api-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-api >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-api get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-api /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-backend-api/\n\nsent 2,999 bytes  received 21 bytes  6,040.00 bytes/sec\ntotal size is 21,258,374  speedup is 7,039.20\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-api /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-api-1.0.826.zip /srv/salt/fso/test/dmz2/fs-china-online-backend-api.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-backend-pbproxy/\n\nsent 2,290 bytes  received 22 bytes  4,624.00 bytes/sec\ntotal size is 23,678,082  speedup is 10,241.38\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-pbproxy-1.0.826.zip /srv/salt/fso/test/dmz1/fs-china-online-backend-pbproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-etl-1.0.45.zip -d /srv/salt/fso/test/temp/fs-china-online-etl >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-etl get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-etl /srv/salt/fso/test/dmz3
-b'sending incremental file list\nfs-china-online-etl/\n\nsent 252 bytes  received 20 bytes  544.00 bytes/sec\ntotal size is 4,323,117  speedup is 15,893.81\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-etl /srv/salt/fso/test/dmz3
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-etl-1.0.45.zip /srv/salt/fso/test/dmz3/fs-china-online-etl.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-feproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-feproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-feproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-feproxy /srv/salt/fso/test/dmz1
-b'sending incremental file list\nfs-china-online-backend-feproxy/\n\nsent 564 bytes  received 21 bytes  1,170.00 bytes/sec\ntotal size is 2,878,490  speedup is 4,920.50\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-feproxy /srv/salt/fso/test/dmz1
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-feproxy-1.0.826.zip /srv/salt/fso/test/dmz1/fs-china-online-backend-feproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-backend-admproxy-1.0.826.zip -d /srv/salt/fso/test/temp/fs-china-online-backend-admproxy >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-backend-admproxy get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-admproxy /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-backend-admproxy/\n\nsent 967 bytes  received 21 bytes  1,976.00 bytes/sec\ntotal size is 3,497,105  speedup is 3,539.58\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-backend-admproxy /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-backend-admproxy-1.0.826.zip /srv/salt/fso/test/dmz2/fs-china-online-backend-admproxy.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-admin-portal-1.1.14.145.zip -d /srv/salt/fso/test/temp/fs-china-online-admin-portal >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-admin-portal get done
-local run: command: /usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-admin-portal /srv/salt/fso/test/dmz2
-b'sending incremental file list\nfs-china-online-admin-portal/\n\nsent 774 bytes  received 23 bytes  1,594.00 bytes/sec\ntotal size is 2,745,450  speedup is 3,444.73\n'
-/usr/bin/rsync -avz --delete /srv/salt/fso/test/temp/fs-china-online-admin-portal /srv/salt/fso/test/dmz2
-local run: command: cp /srv/salt/fso/test/temp/fs-china-online-admin-portal-1.1.14.145.zip /srv/salt/fso/test/dmz2/fs-china-online-admin-portal.zip
-local run: command: unzip /srv/salt/fso/test/temp/fs-china-online-client-1.6.50.1608.zip -d /srv/salt/fso/test/temp/fs-china-online-client >/dev/null
-file /srv/salt/fso/test/temp/fs-china-online-client get done18:45:15 [Q] INFO Processed [north-red-april-cat]
+{'msg': {'out': ['"Failed to authenticate! This is most likely because this user is not permitted to execute commands, but there is a small possibility that a disk error occurred (check disk/inode usage)."'], 'err': [], 'cmd': ['/usr/bin/salt -t120 -N fso_test_all state.apply fso/fso_test_all pillar="{\'SwaggerRootUrl\': \'https://114.247.183.89\', \'ClientProxy_ProxyURL\': \'cons.vwfs-online.com/proxy\', \'API_DCPLeadURL\': \'http://10.42.84.212:8085/DataApi/LeadApi.ashx\', \'API_ConnectionString\': \'data source=sqlcnapp2k.fs86.vwf.vwfs-ad;initial catalog=VWFCFSONLINEK;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework\', \'ClientProxy_LogPath\': \'C:\\\\logs\\\\\', \'AdminProxy_LogPath\': \'D:\\\\logs\\\\\', \'API_LogPath\': \'D:\\\\logs\\\\\', \'API_DgiService\': \'http://beul0009:8080/VwCNWebApp/cxf/DealerPosInterfaceService\', \'API_DCPApplicantURL\': \'http://10.42.84.212:8085/DataApi/ApplicantApi.ashx\', \'API_SmsService\': \'http://fscnbesa2007/smsservice/SmsService\', \'API_SMSWinService_servicePrincipalName\': \'host/FSCNBEY12102.fs86.vwf.vwfs-ad\', \'ImagesRewrite\': \'http://fsonline-api-con.fs86.vwf.vwfs-ad:8081/Images/{R:1}\', \'API_TestVerificationCode\': 99999, \'API_SMSWinService\': \'http://fscnbesa2007/smsservice/SMSWinService\', \'AdminProxy_ProxyURL\': \'fsonline-admin-con.fs86.vwf.vwfs-ad:8082/proxy\', \'API_ImagesRoot\': \'D:\\\\wwwRoot\\\\images\', \'FSOnlineURLAuthority\': \'fsonline-api-con.fs86.vwf.vwfs-ad:8081\'}" --out=json'], 'status': True}, 'version_number': '18.1.16'}16:05:44 [Q] INFO Processed [nitrogen-avocado-venus-angel]
+16:07:27 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:07:27 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:09:27 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:09:27 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:11:27 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:11:27 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:13:28 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:13:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:15:28 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:15:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:17:28 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:17:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:19:28 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:19:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:21:28 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:21:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:23:28 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:23:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:25:28 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:25:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:27:28 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:27:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:29:28 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:29:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:31:28 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:31:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:33:29 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:33:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:35:29 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:35:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:37:29 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:37:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:39:29 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:39:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:41:29 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:41:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:43:29 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:43:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:45:29 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:45:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:47:29 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:47:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:49:29 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:49:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:51:29 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:51:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:53:29 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:53:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:55:30 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:55:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:57:30 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+16:57:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+16:59:30 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+16:59:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:01:30 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:01:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:03:30 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:03:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:05:30 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:05:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:07:30 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:07:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:09:30 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:09:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:11:30 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:11:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:13:31 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:13:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:15:31 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:15:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:17:31 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:17:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:19:31 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:19:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:21:31 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:21:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:23:31 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:23:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:25:31 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:25:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:27:31 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:27:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:29:31 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:29:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:31:31 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:31:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:33:31 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:33:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:35:32 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:35:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:37:32 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:37:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:39:32 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:39:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:41:32 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:41:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:43:32 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:43:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:45:32 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:45:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:47:33 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:47:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:49:33 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:49:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:51:33 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:51:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:53:33 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:53:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:55:33 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:55:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:57:33 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+17:57:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+17:59:33 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+17:59:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:01:33 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:01:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:03:34 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:03:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:05:34 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:05:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:07:34 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:07:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:09:34 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:09:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:11:34 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:11:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:13:34 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:13:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:15:35 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:15:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:17:35 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:17:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:19:35 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:19:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:21:35 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:21:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:23:35 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:23:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:25:35 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:25:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:27:35 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:27:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:29:35 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:29:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:31:36 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:31:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:33:36 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:33:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:35:36 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:35:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:37:36 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:37:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:39:36 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:39:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:41:36 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:41:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:43:36 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:43:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:45:36 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:45:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:47:36 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:47:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:49:37 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:49:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:51:37 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:51:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:53:37 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:53:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:55:37 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:55:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:57:37 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+18:57:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+18:59:37 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+18:59:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:01:37 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:01:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:03:37 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:03:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:05:37 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:05:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:07:38 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:07:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:09:38 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:09:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:11:38 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:11:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:13:38 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:13:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:15:38 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:15:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:17:38 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:17:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:19:39 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:19:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:21:39 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:21:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:23:39 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:23:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:25:39 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:25:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:27:39 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:27:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:29:39 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:29:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:31:39 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:31:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:33:39 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:33:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:35:40 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:35:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:37:40 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:37:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:39:40 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:39:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:41:40 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:41:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:43:40 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:43:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:45:40 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:45:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:47:40 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:47:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:49:41 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:49:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:51:41 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:51:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:53:41 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:53:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:55:41 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:55:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:57:41 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+19:57:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+19:59:41 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+19:59:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:01:41 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:01:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:03:41 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:03:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:05:41 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:05:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:07:41 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:07:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:09:41 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:09:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:11:42 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:11:42 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:13:42 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:13:42 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:15:42 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:15:42 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:17:42 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:17:42 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:19:42 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:19:42 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:21:42 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:21:42 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:23:43 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:23:43 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:25:43 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:25:43 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:27:43 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:27:43 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:29:43 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:29:43 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:31:43 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:31:43 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:33:43 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:33:43 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:35:43 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:35:43 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:37:44 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:37:44 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:39:44 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:39:44 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:41:44 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:41:44 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:43:44 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:43:44 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:45:44 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:45:44 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:47:44 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:47:44 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:49:44 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:49:44 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:51:45 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:51:45 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:53:45 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:53:45 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:55:45 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:55:45 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:57:45 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+20:57:45 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+20:59:45 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+20:59:45 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:01:45 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:01:45 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:03:45 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:03:45 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:05:45 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:05:45 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:07:45 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:07:45 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:09:46 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:09:46 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:11:46 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:11:46 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:13:46 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:13:46 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:15:46 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:15:46 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:17:46 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:17:46 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:19:46 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:19:46 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:21:46 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:21:46 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:23:46 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:23:46 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:25:46 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:25:46 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:27:47 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:27:47 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:29:47 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:29:47 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:31:47 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:31:47 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:33:47 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:33:47 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:35:47 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:35:47 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:37:47 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:37:47 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:39:47 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:39:47 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:41:47 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:41:47 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:43:47 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:43:47 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:45:47 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:45:47 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:47:48 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:47:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:49:48 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:49:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:51:48 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:51:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:53:48 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:53:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:55:48 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:55:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:57:48 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+21:57:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+21:59:48 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+21:59:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:01:48 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:01:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:03:48 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:03:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:05:48 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:05:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:07:48 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:07:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:09:48 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:09:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:11:48 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:11:48 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:13:48 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:13:49 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:15:49 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:15:49 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:17:49 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:17:49 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:19:49 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:19:49 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:21:49 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:21:49 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:23:49 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:23:49 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:25:49 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:25:49 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:27:49 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:27:49 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:29:49 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:29:49 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:31:49 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:31:50 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:33:50 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:33:50 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:35:50 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:35:50 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:37:50 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:37:50 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:39:50 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:39:50 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:41:50 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:41:50 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:43:50 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:43:50 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:45:50 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:45:50 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:47:50 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:47:50 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:49:50 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:49:50 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:51:50 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:51:51 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:53:51 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:53:51 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:55:51 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:55:51 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:57:51 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+22:57:51 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+22:59:51 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+22:59:51 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:01:51 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:01:52 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:03:51 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:03:51 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:05:52 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:05:52 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:07:52 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:07:52 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:09:52 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:09:52 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:11:52 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:11:52 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:13:52 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:13:52 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:15:52 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:15:52 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:17:52 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:17:52 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:19:52 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:19:52 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:21:53 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:21:53 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:23:53 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:23:53 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:25:53 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:25:53 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:27:53 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:27:53 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:29:53 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:29:53 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:31:53 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:31:53 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:33:53 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:33:53 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:35:54 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:35:54 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:37:54 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:37:54 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:39:54 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:39:54 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:41:54 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:41:54 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:43:54 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:43:54 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:45:54 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:45:54 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:47:55 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:47:55 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:49:55 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:49:55 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:51:55 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:51:55 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:53:55 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:53:55 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:55:55 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:55:55 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:57:55 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+23:57:55 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+23:59:56 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+23:59:56 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:01:56 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:01:56 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:03:56 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:03:56 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:05:56 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:05:56 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:07:56 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:07:56 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:09:56 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:09:56 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:11:56 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:11:57 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:13:56 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:13:57 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:15:57 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:15:57 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:17:57 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:17:57 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:19:57 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:19:57 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:21:57 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:21:57 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:23:57 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:23:57 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:25:57 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:25:58 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:27:58 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:27:58 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:29:58 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:29:58 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:31:58 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:31:58 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:33:58 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:33:58 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:35:58 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:35:58 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:37:58 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:37:58 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:39:58 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:39:58 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:41:59 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:41:59 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:43:59 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:43:59 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:45:59 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:45:59 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:47:59 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:47:59 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:49:59 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:49:59 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:51:59 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:51:59 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:54:00 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:54:00 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:56:00 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+00:56:00 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+00:58:00 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+00:58:00 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:00:00 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:00:00 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:02:00 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:02:00 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:04:00 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:04:00 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:06:00 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:06:00 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:08:01 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:08:01 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:10:01 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:10:01 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:12:01 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:12:01 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:14:01 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:14:01 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:16:01 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:16:01 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:18:02 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:18:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:20:02 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:20:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:22:02 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:22:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:24:02 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:24:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:26:02 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:26:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:28:02 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:28:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:30:02 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:30:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:32:02 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:32:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:34:02 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:34:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:36:02 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:36:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:38:02 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:38:02 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:40:03 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:40:03 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:42:03 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:42:03 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:44:03 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:44:03 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:46:03 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:46:03 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:48:03 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:48:03 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:50:03 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:50:03 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:52:03 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:52:04 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:54:04 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:54:04 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:56:04 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+01:56:04 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+01:58:04 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+01:58:04 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:00:04 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:00:04 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:02:04 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:02:04 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:04:04 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:04:04 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:06:05 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:06:05 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:08:05 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:08:05 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:10:05 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:10:05 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:12:05 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:12:05 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:14:05 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:14:05 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:16:05 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:16:05 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:18:05 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:18:05 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:20:05 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:20:05 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:22:05 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:22:05 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:24:06 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:24:06 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:26:06 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:26:06 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:28:06 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:28:06 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:30:06 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:30:06 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:32:06 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:32:06 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:34:06 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:34:06 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:36:06 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:36:07 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:38:06 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:38:06 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:40:07 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:40:07 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:42:07 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:42:07 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:44:07 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:44:07 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:46:07 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:46:07 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:48:07 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:48:07 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:50:07 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:50:07 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:52:08 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:52:08 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:54:08 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:54:08 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:56:08 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+02:56:08 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+02:58:08 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+02:58:08 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:00:08 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:00:08 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:02:08 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:02:08 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:04:08 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:04:08 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:06:09 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:06:09 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:08:09 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:08:09 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:10:09 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:10:09 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:12:09 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:12:09 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:14:09 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:14:09 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:16:09 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:16:09 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:18:09 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:18:09 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:20:09 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:20:09 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:22:10 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:22:10 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:24:10 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:24:10 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:26:10 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:26:10 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:28:10 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:28:10 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:30:10 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:30:10 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:32:10 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:32:10 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:34:10 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:34:10 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:36:10 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:36:10 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:38:10 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:38:11 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:40:11 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:40:11 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:42:11 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:42:11 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:44:11 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:44:11 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:46:11 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:46:11 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:48:11 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:48:11 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:50:11 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:50:11 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:52:11 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:52:11 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:54:11 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:54:11 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:56:12 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+03:56:12 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+03:58:12 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+03:58:12 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:00:12 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:00:12 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:02:12 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:02:12 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:04:12 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:04:12 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:06:12 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:06:12 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:08:13 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:08:13 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:10:13 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:10:13 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:12:13 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:12:13 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:14:13 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:14:13 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:16:13 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:16:13 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:18:13 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:18:13 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:20:13 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:20:13 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:22:13 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:22:13 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:24:14 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:24:14 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:26:14 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:26:14 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:28:14 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:28:14 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:30:14 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:30:14 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:32:14 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:32:14 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:34:14 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:34:14 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:36:14 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:36:14 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:38:14 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:38:14 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:40:15 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:40:15 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:42:15 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:42:15 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:44:15 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:44:15 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:46:15 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:46:15 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:48:15 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:48:15 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:50:15 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:50:15 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:52:16 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:52:16 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:54:15 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:54:15 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:56:16 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+04:56:16 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+04:58:16 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+04:58:16 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:00:16 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:00:16 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:02:16 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:02:16 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:04:16 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:04:16 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:06:17 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:06:17 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:08:17 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:08:17 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:10:17 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:10:17 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:12:17 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:12:17 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:14:17 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:14:17 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:16:17 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:16:17 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:18:17 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:18:17 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:20:17 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:20:17 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:22:18 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:22:18 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:24:18 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:24:18 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:26:18 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:26:18 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:28:18 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:28:18 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:30:18 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:30:18 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:32:18 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:32:18 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:34:18 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:34:18 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:36:19 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:36:19 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:38:19 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:38:19 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:40:19 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:40:19 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:42:19 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:42:19 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:44:19 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:44:19 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:46:19 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:46:19 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:48:19 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:48:19 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:50:19 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:50:19 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:52:19 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:52:20 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:54:20 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:54:20 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:56:20 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+05:56:20 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+05:58:20 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+05:58:20 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:00:20 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:00:20 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:02:20 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:02:20 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:04:20 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:04:20 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:06:20 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:06:20 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:08:20 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:08:20 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:10:21 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:10:21 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:12:21 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:12:21 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:14:21 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:14:21 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:16:21 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:16:21 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:18:21 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:18:21 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:20:21 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:20:21 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:22:21 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:22:21 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:24:22 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:24:22 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:26:22 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:26:22 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:28:22 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:28:22 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:30:22 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:30:22 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:32:22 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:32:22 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:34:22 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:34:22 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:36:22 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:36:22 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:38:23 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:38:23 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:40:23 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:40:23 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:42:23 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:42:23 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:44:23 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:44:23 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:46:23 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:46:23 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:48:23 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:48:23 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:50:23 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:50:23 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:52:24 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:52:24 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:54:24 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:54:24 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:56:24 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+06:56:24 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+06:58:24 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+06:58:24 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:00:24 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:00:24 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:02:24 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:02:24 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:04:24 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:04:24 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:06:25 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:06:25 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:08:25 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:08:25 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:10:25 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:10:25 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:12:25 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:12:25 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:14:25 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:14:25 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:16:25 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:16:25 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:18:25 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:18:26 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:20:25 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:20:25 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:22:26 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:22:26 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:24:26 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:24:26 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:26:26 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:26:26 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:28:26 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:28:26 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:30:26 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:30:26 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:32:26 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:32:26 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:34:26 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:34:26 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:36:27 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:36:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:38:27 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:38:27 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:40:27 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:40:27 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:42:27 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:42:27 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:44:27 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:44:27 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:46:27 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:46:27 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:48:27 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:48:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:50:27 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:50:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:52:27 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:52:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:54:28 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:54:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:56:28 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+07:56:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+07:58:28 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+07:58:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:00:28 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:00:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:02:28 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:02:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:04:28 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:04:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:06:28 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:06:28 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:08:29 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:08:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:10:29 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:10:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:12:29 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:12:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:14:29 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:14:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:16:29 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:16:29 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:18:30 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:18:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:20:30 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:20:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:22:30 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:22:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:24:30 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:24:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:26:30 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:26:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:28:30 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:28:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:30:30 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:30:30 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:32:30 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:32:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:34:31 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:34:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:36:31 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:36:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:38:31 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:38:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:40:31 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:40:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:42:31 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:42:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:44:31 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:44:31 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:46:32 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:46:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:48:32 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:48:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:50:32 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:50:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:52:32 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:52:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:54:32 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:54:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:56:32 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+08:56:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+08:58:32 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+08:58:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:00:32 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:00:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:02:32 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:02:32 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:04:33 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:04:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:06:33 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:06:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:08:33 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:08:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:10:33 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:10:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:12:33 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:12:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:14:33 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:14:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:16:33 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:16:33 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:18:34 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:18:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:20:34 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:20:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:22:34 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:22:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:24:34 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:24:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:26:34 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:26:34 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:28:35 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:28:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:30:35 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:30:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:32:35 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:32:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:34:35 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:34:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:36:35 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:36:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:38:35 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:38:35 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:40:35 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:40:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:42:36 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:42:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:44:36 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:44:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:46:36 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:46:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:48:36 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:48:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:50:36 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:50:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:52:36 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:52:36 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:54:37 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:54:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:56:37 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+09:56:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+09:58:37 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+09:58:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:00:37 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:00:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:02:37 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:02:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:04:37 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:04:37 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:06:37 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:06:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:08:38 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:08:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:10:38 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:10:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:12:38 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:12:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:14:38 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:14:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:16:38 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:16:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:18:38 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:18:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:20:38 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:20:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:22:38 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:22:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:24:38 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:24:38 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:26:39 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:26:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:28:39 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:28:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:30:39 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:30:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:32:39 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:32:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:34:39 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:34:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:36:39 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:36:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:38:39 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:38:39 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:40:40 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:40:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:42:40 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:42:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:44:40 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:44:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:46:40 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:46:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:48:40 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:48:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:50:40 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:50:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:52:40 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:52:40 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:54:40 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:54:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:56:41 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+10:56:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+10:58:41 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+10:58:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+11:00:41 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+11:00:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+11:02:41 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+11:02:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+11:04:41 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+11:04:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+11:06:41 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+11:06:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+11:08:41 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+11:08:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+11:10:41 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+11:10:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+11:12:41 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+11:12:41 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+11:14:42 [Q] INFO Process-1:2 processing [aspen-virginia-mockingbird-fruit]
+11:14:42 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.
+11:16:42 [Q] INFO Process-1:1 processing [aspen-virginia-mockingbird-fruit]
+11:16:42 [Q] ERROR Failed [aspen-virginia-mockingbird-fruit] - tasks matching query does not exist.

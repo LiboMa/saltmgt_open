@@ -41,6 +41,9 @@
             <a class="nav-link" href="#">Settings</a>
           </li> -->
             {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href="/autocd/miniongroups/"> <i class="fa fa-user fa-fw"></i>Minion Groups<i class="fa fa-caret-down"></i></a>
+                </li>
                 <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
                            <i class="fa fa-user fa-fw"></i>{{ request.user.username}}<i class="fa fa-caret-down"></i>
@@ -102,9 +105,12 @@
    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
 
-    <script src="/static/js/vendor/popper.min.js"></script>
+    <!--<script src="/static/js/vendor/popper.min.js"></script>-->
     <script src="/static/js/bootstrap.min.js"></script>
     <!-- Placed at the end of the document so the pages load faster -->
   </body>

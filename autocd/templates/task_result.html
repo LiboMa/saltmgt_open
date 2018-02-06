@@ -1,10 +1,9 @@
 {% extends "admin/bs.html" %}
 
 {% block content %}
+
 <div class="container">
-
   <h2> Task Result</h2>
-
   <br />
   <table class="table table-dark table-hover">
     <thead>
@@ -16,70 +15,101 @@
       </tr>
     </thead>
     <tbody>
-						<tr>
-								<td> {{ task.env }} </td>
-								<td> {{ task.env.project_name }} </td>
-								<td> {{ task.deploy_url }} </td>
-								<td> {{ task.status }} </td>
-						</tr>
+		<tr>
+            <td> {{ task.env }} </td>
+            <td> {{ task.env.project_name }} </td>
+            <td> {{ task.deploy_url }} </td>
+            <td> {{ task.status }} </td>
+        </tr>
     </tbody>
   </table>
 </div>
-  <div class="container">
 
-    {% if error_msg %}
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">                                                      
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-          <strong>Woops!{{error_msg }}</strong>
+
+<div class="container">
+{% if result is not None %}
+   {% for r_out in result_out %}
+	    <table class="table table-dark table-hover">
+	      <thead>
+		<tr>
+		  <th>Minion</th>
+		  <th>Name</th>
+		  <th>Result</th>
+		  <th>Duration</th>
+		</tr>
+	      </thead>
+	      <tbody>
+		  {% for tgt,value in r_out.items %}
+		    {% for app, app_value in value.items %}
+							{% if app_value.result %}
+								<tr class="table-success">
+							{% else %}
+								<tr class="table-danger">
+							{% endif %}
+												<td> {{ tgt }} </td>
+												<td> {{ app }} </td>
+												<td> {{ app_value.name }} </td>
+												<td> {{ app_value.Duration }}</span> </td>
+							</tr>
+		    {% endfor %}
+		  {% endfor %}
+	      </tbody>
+	    </table>
+   {% endfor %}
+{% else %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+        <strong> still in processing, no output yet.</strong>
     </div>
-    {% endif %}
-
-    
-<div class="row">
-				<div class="col">
-						<div class="card card-body">
-									<div class="card-header"><H5 class="card-title">Output</h5></div>
-										{% if result.msg.out %}
-
-                    <p> {{result.msg.out.0 }}</p>
-												  <!--{% for out in result.msg.out %}
-                          <p> {{ out }}</p> 
-                          {% endfor %} -->
-										{% else %}
-												<p>no outputs</p>
-										{% endif%}
-						</div>
-					</div>
-				<div class="col">
-						{% if result.msg.err %}
-						<div class="card card-body">
-									<div class="card-header card-inverse card-warning"><h5 class="card-title">Error</h5></div>
-
-								<p> {{result.msg.err }}</p>
-								 <!-- {% for out in result.msg.out %}
-											<p> {{ out }}</p>
-											{% endfor %} -->
-						{% else %}
-						<div class="card card-body">
-									<div class="card-header card-body"><h5>Error</h5></div>
-								<p>no erros, {{ result.msg.err }}</p>
-						{% endif%}
-						</div>
-				</div>
+{% endif%}
 </div>
 
-<div class="row">
-			<div class="col">
-			<p></p>
+
+<div class="container">
+    {% if error_msg %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+        <strong>Woops!{{error_msg }}</strong>
+    </div>
+    {% endif %}
+</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="card card-body">
+			{% if result.msg.err %}
+				<div class="card-header card-inverse card-warning"><h5 class="card-title">Error</h5></div>
+					<p> {{result.msg.err }}</p>
+			{% else %}
+				<div class="card-header card-body"><h5>Error</h5></div>
+					<p>no erros, {{ result.msg.err }}</p>
+			{% endif%}
+			</div>
+		</div>
+		<div class="col">
+			<div class="card card-body">
+				<div class="card-header"><H5 class="card-title">Output</h5></div>
+					{% if result.msg.out %}
+						<p> {{result.msg.out.0 }}</p>
+					{% else %}
+						<p>no outputs</p>
+					{% endif%}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
 			<h5>Command</h5>
 			<div class="card card-body">
 			<p>{{ result.msg.cmd }}</p>
+			</div>
 		</div>
+
 	</div>
-
-
-
 </div>
 
 
 {% endblock %}
+
