@@ -1,6 +1,6 @@
 # settings.py
 # active directory authentication module
-AD_DNS_NAME = 'FS86.VWF.VWFS-AD'	 # FQDN of your DC (using just the Domain Name to utilize all DC's)
+AD_DNS_NAME = 'example.dom'	 # FQDN of your DC (using just the Domain Name to utilize all DC's)
 # If using non-SSL use these
 #AD_LDAP_PORT=389
 #AD_LDAP_URL='ldap://%s:%s' % (AD_DNS_NAME,AD_LDAP_PORT)
@@ -8,8 +8,8 @@ AD_DNS_NAME = 'FS86.VWF.VWFS-AD'	 # FQDN of your DC (using just the Domain Name 
 AD_LDAP_PORT=389
 #AD_LDAP_URL='ldaps://%s:%s' % (AD_DNS_NAME,AD_LDAP_PORT)
 AD_LDAP_URL='ldap://%s:%s' % (AD_DNS_NAME,AD_LDAP_PORT)
-AD_SEARCH_DN = 'DC=fs86,DC=vwf,DC=vwfs-ad'
-AD_NT4_DOMAIN = 'FS86.VWF.VWFS-AD'
+AD_SEARCH_DN = 'DC=xx,DC=yy,DC=com'
+AD_NT4_DOMAIN = 'example.com'
 AD_SEARCH_FIELDS = ['mail','givenName','sn','sAMAccountName','memberOf']
 #AD_MEMBERSHIP_ADMIN = ['AdminGroup']	# this ad group gets superuser status in django
 # only members of this group can access
@@ -25,7 +25,6 @@ AD_DEBUG_FILE='/tmp/ldap.debug'
 #    'autocd.backend.ActiveDirectoryAuthenticationBackend'
     #'django.contrib.auth.backends.ModelBackend' #Comment out to prevent authentication from DB
 #)
-
 
 # backend.py
 from ldap3 import (Server, Connection, ALL, NTLM, SUBTREE)
@@ -74,7 +73,7 @@ class ActiveDirectoryAuthenticationBackend():
             c = Connection(s,
                     auto_bind = True,
                     client_strategy = 'SYNC',
-                    user = 'cnvwfs02\\'+ username,
+                    user = 'domain\\'+ username,
                     password = password,
                     authentication = NTLM,
                     check_names = True,
@@ -128,7 +127,7 @@ class ActiveDirectoryAuthenticationBackend():
             c = Connection(s,
                     auto_bind = True,
                     client_strategy = 'SYNC',
-                    user = 'cnvwfs02\\'+ username,
+                    user = 'domain\\'+ username,
                     password = password,
                     authentication = NTLM,
                     check_names = True,

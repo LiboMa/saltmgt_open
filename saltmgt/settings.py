@@ -25,7 +25,7 @@ SECRET_KEY = 'vy2rjrnoa=cfpuyn^8lm3b3@t4cykd68xkk_1ux^2i0$_@-ys-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["10.42.77.46", "beul2017","127.0.0.1","0.0.0.0", "www.tryforever.org", '10.42.68.184' ]
+ALLOWED_HOSTS = [ '127.0.0.1' ]
 
 
 # Application definition
@@ -85,8 +85,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'saltmgt',
-        'USER': 'root',
-        'PASSWORD': 'Desert_eagle',
+        'USER': 'dbadmin',
+        'PASSWORD': 'Password_here',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
