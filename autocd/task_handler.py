@@ -241,7 +241,7 @@ class Tasks_deploy():
 
                 # cmd = core deploy function, it call salt of master to deploy
                 # application by nodegroups, e.g. minion_group
-                self.cmd = ('/usr/bin/salt -t120 -N {0} state.apply {1} pillar="{2}" --out=json'\
+                self.cmd = ('/usr/bin/salt -t120 -N {0} state.apply {1} pillar="{2}" --out=json --out-indent -1'\
                         .format(str(self.minion_group).lower(), state_sls, pillar_data)
                         )
                 print (self.cmd)
@@ -260,7 +260,7 @@ class Tasks_deploy():
                     check=True
                     #print ("!!!!!!!!!!!!!!!!!!check info!!!!!!!!!!", check)
                     if check is True:
-                        self.ret['msg']['out'].append(run_process.stdout.decode().strip('\n'))
+                        self.ret['msg']['out'].append(run_process.stdout.decode())
                         self.ret['msg']['status'] = True
                         return self.ret['msg']['status']
                     else:
@@ -296,11 +296,8 @@ class Tasks_deploy():
             #self.task.result = self.cmd
             self.task.result = json.dumps(self.ret)
             self.task.date = timezone.now()
-            print (self.ret)
             self.task.save()
             self.task.env.save()
-            #print (self.task.env.current_version)
-            #print (self.task.env_id)
             return True
         else:
             self.task.status = "failed"

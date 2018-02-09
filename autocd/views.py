@@ -296,9 +296,18 @@ def show_task_result(request, task_id):
             result = None
             msg = error_msg
 
+        if result is not None:
+            
+            #return HttpResponse(result['msg']['out'].split("\n"))
+            # get json data from list [0] of salt api
+            result_out = [ json.loads(r) for r in result['msg']['out'][0].split("\n")[:-1] ]
+            #print (result_out[0])
+        else:
+            result_out = None
+
         context = {'result': result,
         #           'result_err': result['msg']['err'],
-                   'result_out': json.loads(result['msg']['out']),
+                   'result_out': result_out,
                 'task': task,
                 'error_msg': msg
                 }
