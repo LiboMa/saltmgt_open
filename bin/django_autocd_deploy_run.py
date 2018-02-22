@@ -7,7 +7,7 @@ import subprocess
 #import salt.key
 
 # This script is used to deploy data for saltstack master which is also can be
-# run by Jekins(salt-api) @ written by Ma Libo []
+# run by Jekins(salt-api) @ written by 
 #
 # Version=1.0
 # Version=1.1
@@ -15,7 +15,7 @@ import subprocess
 '''
 History:
 CGP project supported @ 8.30.2017
-Using unzip mode instead of folders level transferring @ 11.10.2017 updated by Ma Libo[dkx4oih]
+Using unzip mode instead of folders level transferring @ 11.10.2017 updated
 
 '''
 
